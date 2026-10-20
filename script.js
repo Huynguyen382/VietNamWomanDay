@@ -1,38 +1,38 @@
 /**
- * CHÚC MỪNG NGÀY PHỤ NỮ VIỆT NAM 20/10
- * Script điều khiển hiệu ứng sinh động, âm thanh đáng yêu, thiệp tương tác & ảnh bao quanh
+ * CHÚC MỪNG 20/10 - DÀNH TẶNG NỮ SINH VIÊN
+ * Script hiệu ứng ngập tràn trái tim, âm thanh thanh xuân & thiệp chúc mừng sinh viên
  */
 
 // ==========================================================================
-// 1. DỮ LIỆU LỜI CHÚC Ý NGHĨA THEO CHỦ ĐỀ
+// 1. KHO LỜI CHÚC Ý NGHĨA DÀNH CHO NỮ SINH VIÊN
 // ==========================================================================
 const WISHES = {
-  mom: [
-    "Kính chúc Mẹ yêu ngày 20/10 luôn tràn ngập sức khỏe, bình an và hạnh phúc! Cảm ơn Mẹ đã luôn là vòng tay ấm áp nhất chở che cho con suốt cuộc đời. Con yêu Mẹ thật nhiều! ❤️",
-    "Gửi Mẹ kính yêu! Con chúc Mẹ có một ngày 20/10 thật nhiều niềm vui, bớt đi những âu lo và luôn an yên bên gia đình. Mẹ mãi là đóa hoa đẹp nhất trong lòng con!",
-    "Mẹ ơi, hôm nay là ngày của Mẹ! Con chỉ mong sao Mẹ mãi luôn khỏe mạnh, vui vẻ và nụ cười luôn nở trên môi. Cảm ơn Mẹ vì tất cả những hy sinh cao cả!"
+  classmate: [
+    "Nhân ngày 20/10, chúc toàn thể các bạn nữ lớp mình luôn ngập tràn niềm vui, xinh đẹp rạng rỡ, đồ án qua vèo vèo, săn học bổng mỏi tay và mãi là những đóa hoa tỏa sáng nhất giảng đường! 🎓🌸",
+    "Chúc các bạn nữ lớp mình một ngày 20/10 ngập tràn hoa và quà! Chúc các bạn kỳ này GPA chạm đỉnh 4.0, thi môn nào điểm A môn đó, không bao giờ phải lo thi lại và luôn tươi vui mỗi ngày! 💯✨",
+    "Gửi các bóng hồng của lớp mình: Cảm ơn các bạn đã luôn mang lại năng lượng tích cực và sự ấm áp cho cả lớp. Chúc các bạn ngày 20/10 thật ngọt ngào, hạnh phúc và có một thời thanh xuân rực rỡ nhất! 💖"
   ],
-  lover: [
-    "Chúc em yêu ngày 20/10 thật ngọt ngào, xinh đẹp và rạng rỡ! Cảm ơn em đã đến bên anh, mang lại nụ cười và sự ấm áp diệu kỳ. Mãi yêu em! 🌹",
-    "Gửi người con gái anh yêu nhất: Chúc em luôn tự tin, vui tươi và ngập tràn hạnh phúc. Mọi bão giông bên ngoài hãy để anh lo, việc của em là luôn mỉm cười nhé! 💖",
-    "Ngày Phụ nữ Việt Nam, chúc cô gái nhỏ của anh luôn được cưng chiều, nhận thật nhiều hoa và quà, và mãi là bến đỗ bình yên nhất của anh! ✨"
+  deadline: [
+    "Chúc team chị em chạy deadline ngày 20/10 thật ngọt ngào! Dù bài tập lớn, thuyết trình hay đồ án có khó đến đâu thì chúng mình vẫn luôn xinh đẹp, rạng ngời và cùng nhau 'hạ gục' mọi môn học xuất sắc! 💻🌸",
+    "20/10 chúc hội bạn cùng cày tiểu luận: Deadline tự động lùi xa, bug tự động biến mất, giảng viên khen nức nở và điểm quá trình lúc nào cũng full điểm nhé! Cố lên những chiến thần học tập! 🍀✨",
+    "Gửi hội chị em đồng cam cộng khổ: Hôm nay là 20/10, gác lại âu lo deadline sang một bên để tận hưởng trọn vẹn ngày của phái đẹp nhé. Chúc các bạn luôn tự tin, bản lĩnh và sớm rinh học bổng về tay! 👑💖"
   ],
-  sister: [
-    "Chúc chị/em gái một ngày 20/10 ngập tràn hoa tươi, quà đẹp và luôn rạng rỡ! Chúc bạn sớm tìm được một nửa yêu thương thật tuyệt vời nhé! 🌸",
-    "Nhân ngày 20/10, chúc người chị/em tuyệt vời của tôi luôn trẻ trung, yêu đời, học tập và công tác thật tốt, đạt được mọi ước mơ của mình!",
-    "Chúc bạn có một ngày lễ 20/10 ngập tràn niềm vui! Hãy luôn yêu thương bản thân, tỏa sáng theo cách riêng và luôn mỉm cười thật tươi nhé!"
+  bestie: [
+    "Nhân ngày 20/10, chúc cạ cứng của tớ luôn xinh đẹp hết phần thiên hạ, deadline không bao giờ dí, đi thi khoanh bừa cũng trúng và sớm tìm được một anh người yêu chuẩn gu bao ăn trưa mỗi ngày nhé! 👭💖",
+    "Chúc người bạn thân tuyệt vời nhất của tớ một ngày 20/10 thật rạng rỡ! Cảm ơn cậu đã luôn cùng tớ chia sẻ từng gói mì tôm, từng buổi học sáng sớm và mọi buồn vui thời sinh viên. Yêu cậu nhiều! 🌸✨",
+    "Gửi cạ cứng: Chúc cậu ngày 20/10 nhận được thật nhiều yêu thương! Mong cậu luôn giữ nụ cười hồn nhiên, tự tin tỏa sáng theo cách riêng và luôn thành công trên con đường đã chọn nhé! 🎀❤️"
   ],
-  colleague: [
-    "Chúc toàn thể chị em đồng nghiệp ngày 20/10 thật nhiều niềm vui, luôn xinh đẹp, trẻ trung, công việc hanh thông và gặt hái thật nhiều thành công! 💐",
-    "Chúc phái đẹp ngày 20/10 ngập tràn tiếng cười, nhận được thật nhiều hoa và quà, luôn là nguồn cảm hứng tươi mới nơi công sở!",
-    "Nhân ngày Phụ nữ Việt Nam, chúc bạn luôn giữ được ngọn lửa đam mê, tích cực trong cuộc sống và luôn tỏa sáng rực rỡ!"
+  crush: [
+    "Gửi cô bạn bàn bên: Chúc bạn ngày 20/10 nhận được thật nhiều niềm vui! Nụ cười của bạn chính là động lực giúp cả giảng đường bừng sáng và xua tan mọi mệt mỏi mùa thi cử đấy. Luôn hạnh phúc nhé! ✨💖",
+    "Chúc nàng thơ của giảng đường một ngày 20/10 thật dịu dàng, ấm áp và luôn mỉm cười thật tươi. Hy vọng thanh xuân của bạn sẽ luôn tràn ngập những điều ngọt ngào và kỳ diệu nhất! 🌹🌸",
+    "Ngày Phụ nữ Việt Nam, mong rằng mọi điều tốt đẹp nhất sẽ đến với bạn. Chúc bạn luôn xinh đẹp, học tập thật tốt và luôn có những khoảnh khắc thanh xuân đáng nhớ bên bạn bè! 💌✨"
   ]
 };
 
 // ==========================================================================
 // 2. KHỞI TẠO BIẾN TOÀN CỤC & DOM ELEMENTS
 // ==========================================================================
-let currentCategory = 'mom';
+let currentCategory = 'classmate';
 let currentWishIndex = 0;
 let isAudioPlaying = false;
 let audioCtx = null;
@@ -64,10 +64,11 @@ const modalImg = document.getElementById('modal-img');
 const modalCaption = document.getElementById('modal-caption');
 
 // ==========================================================================
-// 3. CANVAS PARTICLE SYSTEM (CÁNH HOA HỒNG & TIM BAY BỔNG)
+// 3. CANVAS TRÁI TIM NGẬP TRÀN (HEART RAIN & RISING BUBBLES)
 // ==========================================================================
-let particles = [];
+let hearts = [];
 let burstParticles = [];
+let trailParticles = [];
 let width = window.innerWidth;
 let height = window.innerHeight;
 
@@ -78,42 +79,49 @@ function resizeCanvas() {
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
-class AmbientParticle {
+// Hạt trái tim bay lơ lửng (Cả rơi xuống và bay từ dưới lên)
+class AmbientHeart {
   constructor() {
-    this.reset();
+    this.reset(true);
   }
 
-  reset() {
+  reset(initial = false) {
     this.x = Math.random() * width;
-    this.y = Math.random() * -60;
-    this.size = Math.random() * 12 + 8;
-    this.speedY = Math.random() * 1.4 + 0.6;
-    this.speedX = Math.random() * 1.0 - 0.5;
-    this.rotation = Math.random() * 360;
-    this.rotSpeed = (Math.random() - 0.5) * 1.8;
-    this.swing = Math.random() * 2 + 1;
+    this.direction = Math.random() > 0.4 ? 'down' : 'up'; // Trái tim vừa rơi vừa bay lên
+    this.y = initial ? Math.random() * height : (this.direction === 'down' ? -40 : height + 40);
+    this.size = Math.random() * 14 + 10;
+    this.speed = Math.random() * 1.2 + 0.5;
+    this.swing = Math.random() * 1.8 + 0.8;
     this.swingAngle = Math.random() * Math.PI * 2;
     this.swingSpeed = Math.random() * 0.02 + 0.01;
-    this.type = Math.random() > 0.35 ? 'petal' : (Math.random() > 0.5 ? 'heart' : 'sparkle');
-    
-    // Màu cánh hoa hồng phấn tươi sáng
-    const colors = [
-      'rgba(255, 105, 180, 0.75)', // Hot pink
-      'rgba(255, 182, 193, 0.85)', // Light pink
-      'rgba(255, 64, 129, 0.7)',   // Bright pink
-      'rgba(255, 228, 235, 0.9)'   // Pale rose
+    this.rotation = (Math.random() - 0.5) * 40;
+    this.rotSpeed = (Math.random() - 0.5) * 0.8;
+    this.pulse = Math.random() * Math.PI * 2;
+    this.pulseSpeed = Math.random() * 0.04 + 0.02;
+
+    // Gam màu trái tim phong phú ngọt ngào
+    const heartColors = [
+      'rgba(255, 51, 119, 0.78)',  // Hồng đậm rực rỡ
+      'rgba(255, 105, 180, 0.82)', // Hồng phấn
+      'rgba(255, 182, 193, 0.85)', // Hồng pastel
+      'rgba(224, 17, 95, 0.75)',   // Ruby red
+      'rgba(255, 255, 255, 0.88)'  // Trắng tinh khôi phát sáng
     ];
-    this.color = colors[Math.floor(Math.random() * colors.length)];
+    this.color = heartColors[Math.floor(Math.random() * heartColors.length)];
   }
 
   update() {
-    this.y += this.speedY;
     this.swingAngle += this.swingSpeed;
-    this.x += Math.sin(this.swingAngle) * this.swing + this.speedX;
+    this.x += Math.sin(this.swingAngle) * this.swing;
     this.rotation += this.rotSpeed;
+    this.pulse += this.pulseSpeed;
 
-    if (this.y > height + 20 || this.x < -30 || this.x > width + 30) {
-      this.reset();
+    if (this.direction === 'down') {
+      this.y += this.speed;
+      if (this.y > height + 50) this.reset();
+    } else {
+      this.y -= this.speed * 0.8;
+      if (this.y < -50) this.reset();
     }
   }
 
@@ -121,51 +129,79 @@ class AmbientParticle {
     ctx.save();
     ctx.translate(this.x, this.y);
     ctx.rotate((this.rotation * Math.PI) / 180);
+    
+    // Hiệu ứng nhịp đập nhẹ
+    const pulseScale = 1 + Math.sin(this.pulse) * 0.12;
+    ctx.scale(pulseScale, pulseScale);
 
-    if (this.type === 'petal') {
-      ctx.fillStyle = this.color;
-      ctx.beginPath();
-      ctx.moveTo(0, 0);
-      ctx.bezierCurveTo(this.size / 2, -this.size / 2, this.size, 0, 0, this.size);
-      ctx.bezierCurveTo(-this.size, 0, -this.size / 2, -this.size / 2, 0, 0);
-      ctx.fill();
-    } else if (this.type === 'heart') {
-      ctx.fillStyle = 'rgba(255, 64, 129, 0.75)';
-      ctx.beginPath();
-      const s = this.size * 0.55;
-      ctx.moveTo(0, s / 4);
-      ctx.quadraticCurveTo(0, 0, s / 2, 0);
-      ctx.quadraticCurveTo(s, 0, s, s / 2);
-      ctx.quadraticCurveTo(s, s, 0, s * 1.4);
-      ctx.quadraticCurveTo(-s, s, -s, s / 2);
-      ctx.quadraticCurveTo(-s, 0, -s / 2, 0);
-      ctx.quadraticCurveTo(0, 0, 0, s / 4);
-      ctx.fill();
-    } else {
-      // Ngôi sao lấp lánh vàng nhạt
-      ctx.fillStyle = 'rgba(255, 215, 0, 0.85)';
-      ctx.beginPath();
-      ctx.arc(0, 0, Math.random() * 2 + 1, 0, Math.PI * 2);
-      ctx.fill();
-    }
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    const s = this.size * 0.55;
+    ctx.moveTo(0, s / 4);
+    ctx.quadraticCurveTo(0, 0, s / 2, 0);
+    ctx.quadraticCurveTo(s, 0, s, s / 2);
+    ctx.quadraticCurveTo(s, s, 0, s * 1.4);
+    ctx.quadraticCurveTo(-s, s, -s, s / 2);
+    ctx.quadraticCurveTo(-s, 0, -s / 2, 0);
+    ctx.quadraticCurveTo(0, 0, 0, s / 4);
+    ctx.fill();
+
     ctx.restore();
   }
 }
 
-// Hạt nổ tung hoa & tim khi chạm
+// Vệt trái tim nhỏ theo đuôi con trỏ chuột (Cursor Trail)
+class CursorHeart {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.size = Math.random() * 8 + 5;
+    this.vy = -Math.random() * 1.5 - 0.5;
+    this.vx = (Math.random() - 0.5) * 1.5;
+    this.alpha = 1;
+    this.decay = Math.random() * 0.03 + 0.02;
+    this.color = ['#ff3377', '#ff69b4', '#ffffff', '#ffd166'][Math.floor(Math.random() * 4)];
+  }
+
+  update() {
+    this.x += this.vx;
+    this.y += this.vy;
+    this.alpha -= this.decay;
+  }
+
+  draw() {
+    if (this.alpha <= 0) return;
+    ctx.save();
+    ctx.globalAlpha = Math.max(0, this.alpha);
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    const s = this.size * 0.5;
+    ctx.moveTo(this.x, this.y + s / 4);
+    ctx.quadraticCurveTo(this.x, this.y, this.x + s / 2, this.y);
+    ctx.quadraticCurveTo(this.x + s, this.y, this.x + s, this.y + s / 2);
+    ctx.quadraticCurveTo(this.x + s, this.y + s, this.x, this.y + s * 1.4);
+    ctx.quadraticCurveTo(this.x - s, this.y + s, this.x - s, this.y + s / 2);
+    ctx.quadraticCurveTo(this.x - s, this.y, this.x - s / 2, this.y);
+    ctx.quadraticCurveTo(this.x, this.y, this.x, this.y + s / 4);
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+// Hạt nổ tung hoa & tim khi chạm (Burst Confetti)
 class BurstParticle {
   constructor(x, y) {
     this.x = x;
     this.y = y;
     const angle = Math.random() * Math.PI * 2;
-    const speed = Math.random() * 5 + 2;
+    const speed = Math.random() * 6 + 2.5;
     this.vx = Math.cos(angle) * speed;
     this.vy = Math.sin(angle) * speed;
-    this.size = Math.random() * 10 + 6;
+    this.size = Math.random() * 12 + 8;
     this.alpha = 1;
     this.decay = Math.random() * 0.025 + 0.015;
     this.gravity = 0.12;
-    this.symbol = ['🌸', '💖', '✨', '💐', '🌺', '🎀', '⭐'][Math.floor(Math.random() * 7)];
+    this.symbol = ['💖', '💕', '💓', '💗', '🌸', '✨', '🎓', '🎀'][Math.floor(Math.random() * 8)];
   }
 
   update() {
@@ -180,34 +216,54 @@ class BurstParticle {
     if (this.alpha <= 0) return;
     ctx.save();
     ctx.globalAlpha = Math.max(0, this.alpha);
-    ctx.font = `${this.size * 1.4}px serif`;
+    ctx.font = `${this.size * 1.3}px serif`;
     ctx.fillText(this.symbol, this.x, this.y);
     ctx.restore();
   }
 }
 
-// Khởi tạo các hạt
-const PARTICLE_COUNT = Math.min(width < 600 ? 25 : 45, 50);
-for (let i = 0; i < PARTICLE_COUNT; i++) {
-  const p = new AmbientParticle();
-  p.y = Math.random() * height;
-  particles.push(p);
+// Khởi tạo các trái tim bay
+const HEART_COUNT = Math.min(width < 600 ? 30 : 60, 65);
+for (let i = 0; i < HEART_COUNT; i++) {
+  hearts.push(new AmbientHeart());
 }
 
-function spawnBurst(x, y, count = 18) {
+function spawnBurst(x, y, count = 24) {
   for (let i = 0; i < count; i++) {
     burstParticles.push(new BurstParticle(x, y));
   }
 }
 
+// Theo dõi con trỏ chuột tạo vệt trái tim ngọt ngào
+let lastMouseSpawn = 0;
+window.addEventListener('pointermove', (e) => {
+  const now = Date.now();
+  if (now - lastMouseSpawn > 60) {
+    trailParticles.push(new CursorHeart(e.clientX, e.clientY));
+    lastMouseSpawn = now;
+  }
+});
+
+// Vòng lặp vẽ Canvas
 function animateCanvas() {
   ctx.clearRect(0, 0, width, height);
 
-  for (let i = 0; i < particles.length; i++) {
-    particles[i].update();
-    particles[i].draw();
+  // Vẽ các hạt tim nền
+  for (let i = 0; i < hearts.length; i++) {
+    hearts[i].update();
+    hearts[i].draw();
   }
 
+  // Vẽ vệt tim theo chuột
+  for (let i = trailParticles.length - 1; i >= 0; i--) {
+    trailParticles[i].update();
+    trailParticles[i].draw();
+    if (trailParticles[i].alpha <= 0) {
+      trailParticles.splice(i, 1);
+    }
+  }
+
+  // Vẽ pháo hoa tim khi click
   for (let i = burstParticles.length - 1; i >= 0; i--) {
     burstParticles[i].update();
     burstParticles[i].draw();
@@ -220,15 +276,15 @@ function animateCanvas() {
 }
 requestAnimationFrame(animateCanvas);
 
-// Click màn hình tạo pháo hoa tim
+// Click màn hình tung pháo hoa tim
 window.addEventListener('pointerdown', (e) => {
   if (['INPUT', 'BUTTON', 'A'].includes(e.target.tagName)) return;
-  spawnBurst(e.clientX, e.clientY, 12);
-  playChimeTone(523.25 + Math.random() * 200, 0.15);
+  spawnBurst(e.clientX, e.clientY, 16);
+  playChimeTone(587.33 + Math.random() * 200, 0.2);
 });
 
 // ==========================================================================
-// 4. HỆ THỐNG ÂM THANH NGỌT NGÀO (WEB AUDIO API)
+// 4. ÂM THANH THANH XUÂN DỊU NHẸ (WEB AUDIO API)
 // ==========================================================================
 function getAudioContext() {
   if (!audioCtx) {
@@ -269,10 +325,10 @@ function playChimeTone(freq = 659.25, time = 0.35) {
   setTimeout(() => playNote(freq * 1.5, time * 0.7, 'sine', 0.06), 70);
 }
 
-// Giai điệu trong trẻo, vui tươi đáng yêu (C major pentatonic melody)
+// Giai điệu thanh xuân tươi vui (Pentatonic uplifting melody)
 const melodyNotes = [
-  523.25, 587.33, 659.25, 783.99, 880.00, 783.99, 659.25, 523.25,
-  659.25, 783.99, 1046.50, 987.77, 880.00, 783.99, 659.25, 587.33
+  523.25, 659.25, 783.99, 1046.50, 880.00, 783.99, 659.25, 587.33,
+  659.25, 783.99, 880.00, 1174.66, 1046.50, 880.00, 783.99, 659.25
 ];
 let noteIndex = 0;
 
@@ -285,12 +341,12 @@ function startBackgroundMusic() {
   musicInterval = setInterval(() => {
     if (!isAudioPlaying) return;
     const freq = melodyNotes[noteIndex % melodyNotes.length];
-    playNote(freq, 0.55, 'triangle', 0.07);
+    playNote(freq, 0.5, 'triangle', 0.07);
     if (noteIndex % 4 === 0) {
-      playNote(freq / 2, 0.9, 'sine', 0.05);
+      playNote(freq / 2, 0.85, 'sine', 0.05);
     }
     noteIndex++;
-  }, 440);
+  }, 420);
 }
 
 function stopBackgroundMusic() {
@@ -309,19 +365,19 @@ musicBtn.addEventListener('click', () => {
     showToast("Đã tắt nhạc nền");
   } else {
     startBackgroundMusic();
-    showToast("Đang phát giai điệu yêu thương 🎶");
+    showToast("Đang phát giai điệu thanh xuân 🎶");
   }
 });
 
-burstBtn.addEventListener('click', (e) => {
+burstBtn.addEventListener('click', () => {
   const rect = burstBtn.getBoundingClientRect();
-  spawnBurst(rect.left + 21, rect.top + 21, 28);
-  playChimeTone(783.99, 0.35);
-  showToast("Gửi triệu đóa hoa và tim yêu thương! 🌸💖");
+  spawnBurst(rect.left + 22, rect.top + 22, 35);
+  playChimeTone(880, 0.35);
+  showToast("Chúc mừng các bạn nữ sinh viên! 💖🎓");
 });
 
 // ==========================================================================
-// 5. HIỂN THỊ LỜI CHÚC & CHUYỂN TABS
+// 5. CẬP NHẬT LỜI CHÚC & CHUYỂN TABS
 // ==========================================================================
 function updateWishDisplay() {
   const list = WISHES[currentCategory];
@@ -335,7 +391,6 @@ function updateWishDisplay() {
   }, 180);
 }
 
-// Bấm chuyển tab chủ đề
 categoryPills.forEach(pill => {
   pill.addEventListener('click', () => {
     categoryPills.forEach(p => p.classList.remove('active'));
@@ -347,7 +402,6 @@ categoryPills.forEach(pill => {
   });
 });
 
-// Bấm đổi lời chúc tiếp theo
 nextWishBtn.addEventListener('click', () => {
   const list = WISHES[currentCategory];
   currentWishIndex = (currentWishIndex + 1) % list.length;
@@ -355,7 +409,6 @@ nextWishBtn.addEventListener('click', () => {
   playChimeTone(659.25, 0.18);
 });
 
-// Sao chép lời chúc
 copyWishBtn.addEventListener('click', async () => {
   const text = wishContent.textContent.trim();
   try {
@@ -368,19 +421,18 @@ copyWishBtn.addEventListener('click', async () => {
 });
 
 // ==========================================================================
-// 6. CÁ NHÂN HÓA TÊN NGƯỜI NHẬN & NGƯỜI GỬI TỨC THÌ
+// 6. CÁ NHÂN HÓA TÊN SINH VIÊN
 // ==========================================================================
 inputRecipient.addEventListener('input', () => {
   const val = inputRecipient.value.trim();
-  recipientName.textContent = val ? val : "Người Phụ Nữ Tuyệt Vời";
+  recipientName.textContent = val ? val : "Các Bạn Nữ Lớp Mình";
 });
 
 inputSender.addEventListener('input', () => {
   const val = inputSender.value.trim();
-  senderName.textContent = val ? `${val} ❤️` : "Người Yêu Quý Bạn ❤️";
+  senderName.textContent = val ? `${val} 💖` : "Hội Nam Sinh Lớp Mình 💖";
 });
 
-// Sao chép liên kết chia sẻ có chứa tham số tên
 shareLinkBtn.addEventListener('click', async () => {
   const recipient = inputRecipient.value.trim();
   const sender = inputSender.value.trim();
@@ -392,7 +444,7 @@ shareLinkBtn.addEventListener('click', async () => {
 
   try {
     await navigator.clipboard.writeText(url.toString());
-    showToast("Đã sao chép link! Hãy gửi ngay cho người thương nhé 💌");
+    showToast("Đã sao chép link! Gửi vào nhóm lớp ngay nhé 💌");
     playChimeTone(880, 0.3);
   } catch (err) {
     prompt("Sao chép link này để gửi tặng:", url.toString());
@@ -411,7 +463,7 @@ function applyURLParams() {
   }
   if (from) {
     inputSender.value = from;
-    senderName.textContent = `${from} ❤️`;
+    senderName.textContent = `${from} 💖`;
   }
   if (cat && WISHES[cat]) {
     currentCategory = cat;
@@ -422,7 +474,7 @@ function applyURLParams() {
 }
 
 // ==========================================================================
-// 7. TƯƠNG TÁC 6 ẢNH XUNG QUANH & MODAL PHÓNG TO
+// 7. TƯƠNG TÁC 6 ẢNH KỶ NIỆM & PHÓNG TO
 // ==========================================================================
 photoCards.forEach(card => {
   card.addEventListener('click', () => {
@@ -430,12 +482,12 @@ photoCards.forEach(card => {
     const title = card.getAttribute('data-title');
     const rect = card.getBoundingClientRect();
 
-    spawnBurst(rect.left + rect.width / 2, rect.top + rect.height / 2, 22);
+    spawnBurst(rect.left + rect.width / 2, rect.top + rect.height / 2, 24);
     playChimeTone(740, 0.25);
 
     if (img) {
       modalImg.src = img.src;
-      modalCaption.textContent = title || "Khoảnh khắc đáng yêu 🌸";
+      modalCaption.textContent = title || "Kỷ niệm thanh xuân đáng yêu 🎓🌸";
       photoModal.classList.add('show');
       photoModal.setAttribute('aria-hidden', 'false');
     }
@@ -456,7 +508,7 @@ window.addEventListener('keydown', (e) => {
 });
 
 // ==========================================================================
-// 8. THÔNG BÁO TOAST NGỌT NGÀO
+// 8. THÔNG BÁO TOAST
 // ==========================================================================
 let toastTimer = null;
 function showToast(msg) {

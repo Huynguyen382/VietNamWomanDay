@@ -1,66 +1,57 @@
-# 🌸 Chúc Mừng Ngày Phụ Nữ Việt Nam (20/10) - Vietnamese Women's Day
+# 🌸 Chúc Mừng 20/10 - Nữ Sinh Viên Tỏa Sáng 🎓💖
 
-Một trang web tĩnh tương tác hiện đại, ngọt ngào và sinh động chúc mừng **Ngày Phụ nữ Việt Nam 20/10**. Được thiết kế với tông màu hồng tươi sáng, giao diện cực kỳ đáng yêu, gói gọn vừa vặn trong một màn hình (không cần cuộn trang) cùng những bức ảnh kỷ niệm dễ thương bao quanh.
-
----
-
-## ✨ Điểm Nổi Bật & Tính Năng
-
-- 💖 **Gói gọn trong một màn hình (No Scroll)**:
-  - Bố cục trung tâm thông minh, cân đối tuyệt đối trên mọi độ phân giải máy tính, tablet và điện thoại di động.
-  - Tông màu hồng phấn (pastel pink & strawberry cream) tươi sáng, ấm áp, ngập tràn năng lượng tích cực.
-- 🐱 **6 bức ảnh dễ thương bao quanh màn hình**:
-  - Tận dụng các bức ảnh trong thư mục `Picture/` đặt tinh tế tại 4 góc và 2 bên mép màn hình.
-  - Phong cách khung ảnh dán băng dính washi tape đáng yêu, chuyển động bồng bềnh tự nhiên theo thời gian.
-  - Chạm/click vào từng bức ảnh để nghe chuông reo, bắn pháo hoa tim và xem ảnh phóng to.
-- 💌 **Khung thiệp tương tác thông minh**:
-  - Chọn nhanh lời chúc theo từng đối tượng: **Mẹ yêu**, **Người yêu / Vợ**, **Chị / Em gái**, **Bạn bè & Đồng nghiệp**.
-  - Đổi lời chúc ngẫu nhiên phong phú.
-  - Sao chép nhanh lời chúc chỉ với 1 click.
-- 🎁 **Cá nhân hóa thiệp tức thì**:
-  - Điền tên người nhận và người gửi trực tiếp, thiệp tự động cập nhật ngay trên màn hình.
-  - Tạo link chia sẻ (URL params: `?to=...&from=...`) gửi qua Zalo, Messenger, Facebook để khi mở ra sẽ hiển thị đúng tên người được tặng!
-- 🌸 **Hiệu ứng đồ họa sinh động**:
-  - Cánh hoa hồng bay, trái tim và hạt sao lấp lánh rơi chầm chậm bằng Canvas 2D.
-  - Chạm bất cứ điểm nào trên màn hình đều bung tỏa pháo hoa tim rực rỡ.
-- 🎶 **Giai điệu vui tươi, ngọt ngào (Web Audio API)**:
-  - Âm nhạc trong trẻo, không phụ thuộc tài nguyên bên ngoài, tải cực nhanh và hoạt động offline mượt mà.
-  - Nút bật/tắt nhạc nổi góc trên kèm sóng nhạc chuyển động theo điệu nhạc.
+Một trang web tĩnh tương tác hiện đại, tinh tế và ngập tràn sắc hồng ngọt ngào dành tặng riêng cho **các bạn nữ sinh viên** nhân Ngày Phụ nữ Việt Nam 20/10!
 
 ---
 
-## 🚀 Trải Nghiệm & Cài Đặt
+## ✨ Điểm Nổi Bật & Tính Năng Mới
 
-### 1. Xem trực tiếp trên máy (Offline)
-Bạn chỉ cần mở trực tiếp file `index.html` bằng trình duyệt web:
+- 💖 **Phông nền lưới ô vuông nét đứt & giao điểm trái tim trắng**:
+  - Họa tiết SVG ô vuông kẻ nét đứt tinh tế trên nền hồng pastel.
+  - Tại từng điểm giao nhau của đường kẻ là những **trái tim được vẽ bằng nét viền trắng** mềm mại, uyển chuyển.
+  - Hiệu ứng trôi nhẹ tự nhiên mang đến chiều sâu và phong cách sổ tay thanh xuân (bullet journal/aesthetic).
+- 💓 **Hiệu ứng ngập tràn trái tim sinh động**:
+  - Hàng chục trái tim màu hồng phấn, hồng ruby và trắng phát sáng vừa rơi nhẹ, vừa bay lơ lửng từ dưới lên.
+  - Vệt trái tim lấp lánh tự động tỏa ra theo đường di chuột / cử chỉ chạm màn hình (**Cursor Heart Trail**).
+  - Pháo hoa tim bùng nổ rực rỡ khi chạm hoặc click vào bất kỳ đâu trên trang.
+  - Huy hiệu trái tim đập nhịp nhàng (`crestPulse`) trên đỉnh thiệp chúc mừng.
+- 💌 **Bố cục lấy Thiệp Chúc Mừng làm trung tâm (Center-Hero Stage)**:
+  - Thiệp chúc mừng 3D nổi bật chính giữa với viền phát sáng, 4 góc đính tim và các tab chủ đề sinh viên.
+  - 6 bức ảnh kỷ niệm dễ thương trong `Picture/` được sắp xếp đối xứng thành 2 cánh (Trái - Phải) hướng góc nghiêng nhẹ ôm trọn lấy thiệp ở trung tâm.
+  - Mỗi bức ảnh có băng dính washi tape và icon sticker dễ thương, bấm vào sẽ bung nở pháo hoa tim và phóng to ảnh.
+- 🎓 **Bộ lời chúc độc quyền dành riêng cho Nữ Sinh Viên**:
+  - **Bạn Cùng Lớp**: Lời chúc toàn thể các bạn nữ sinh viên luôn xinh xắn, GPA 4.0, qua môn điểm A+.
+  - **Team Deadline**: Lời chúc tiếp thêm động lực vượt qua bài tập lớn, đồ án, tiểu luận và săn học bổng.
+  - **Cạ Cứng**: Lời chúc hóm hỉnh, tình cảm dành cho bạn thân cùng bàn, cạ cứng giảng đường.
+  - **Crush Giảng Đường**: Những câu chúc dịu dàng, ấm áp gửi tới nàng thơ lớp bên.
+- 🎁 **Cá nhân hóa & Gửi tặng nhanh vào nhóm lớp**:
+  - Nhập tên người nhận và người gửi trực tiếp, thiệp cập nhật ngay tức thì.
+  - Bấm **"Gửi tặng link này"** để tự động tạo đường link (URL params: `?to=...&from=...`) gửi ngay vào Zalo nhóm lớp hoặc Facebook.
+- 🎶 **Âm nhạc thanh xuân trong trẻo (Web Audio API)**:
+  - Giai điệu vui tươi, ngọt ngào tổng hợp trực tiếp bằng Web Audio API, chạy mượt mà 100% offline không cần kết nối mạng.
+
+---
+
+## 🚀 Trải Nghiệm Trực Tiếp
+
+### Xem trên máy tính cá nhân
+Chỉ cần mở trực tiếp file `index.html` trong bất kỳ trình duyệt nào:
 ```bash
-# Trên Windows:
 start index.html
 ```
-
-### 2. Kích hoạt GitHub Pages để nhận link trực tuyến miễn phí
-1. Truy cập vào kho mã nguồn trên GitHub: [VietNamWomanDay Repository](https://github.com/Huynguyen382/VietNamWomanDay)
-2. Nhấn vào tab **Settings** > chọn mục **Pages** ở thanh bên trái.
-3. Tại phần **Build and deployment**:
-   - **Source**: Chọn `Deploy from a branch`
-   - **Branch**: Chọn nhánh `main` và thư mục `/(root)`
-   - Nhấn **Save**.
-4. Sau khoảng 1-2 phút, bạn sẽ có đường link xem trực tiếp online:
-   `https://Huynguyen382.github.io/VietNamWomanDay/`
 
 ---
 
 ## 🛠️ Công Nghệ Sử Dụng
 
-- **HTML5**: Cấu trúc ngữ nghĩa chuẩn SEO, tối ưu khả năng truy cập (a11y).
-- **CSS3 Modern**: CSS Grid, Flexbox, Keyframe Animations, Glassmorphism, Bouncy Transitions.
-- **JavaScript (ES6+)**: Canvas 2D Context, Web Audio API, Clipboard API, URLSearchParams.
+- **HTML5**: Cấu trúc ngữ nghĩa hiện đại, thân thiện SEO.
+- **CSS3 Modern**: SVG Data URI pattern (lưới nét đứt & tim trắng), CSS Flexbox/Grid, 3D Transforms, Keyframe Animations.
+- **JavaScript (ES6+)**: Canvas 2D Particle Engine, Cursor Trail System, Web Audio API Synth, Clipboard API.
 - **Google Fonts**: `Comfortaa`, `Dancing Script`, `Nunito`.
-- **Font Awesome 6**: Bộ biểu tượng vector chất lượng cao.
+- **Font Awesome 6**: Bộ icon chất lượng cao.
 
 ---
 
-## 💐 Lời Chúc 20/10
+## 🎓 Lời Chúc 20/10 Gửi Các Nữ Sinh Viên
 
-> *"Phụ nữ là để yêu thương, trân trọng và nâng niu mỗi ngày, không chỉ riêng 20/10."*  
-> Chúc một nửa thế giới luôn xinh đẹp, rạng rỡ, tự tin và ngập tràn hạnh phúc! 🌸✨
+> *"Chúc một nửa thế giới giảng đường luôn giữ trọn nụ cười rạng rỡ, tự tin, thi môn nào điểm A môn đó và có một thời thanh xuân rực rỡ nhất!"* 🌸✨

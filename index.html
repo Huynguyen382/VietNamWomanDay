@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 🌸💖</title>
+  <title>Chúc Mừng 20/10 - Nữ Sinh Viên Tỏa Sáng 🌸🎓💖</title>
   
   <!-- SEO & Social Meta -->
-  <meta name="description" content="Trang web chúc mừng Ngày Phụ nữ Việt Nam 20/10 giao diện hồng ngọt ngào, đáng yêu, hiệu ứng sinh động không cần cuộn trang.">
-  <meta property="og:title" content="Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 🌸">
-  <meta property="og:description" content="Gửi trọn yêu thương và ngàn lời chúc ngọt ngào nhất tới người phụ nữ tuyệt vời!">
+  <meta name="description" content="Trang web chúc mừng Ngày Phụ nữ Việt Nam 20/10 dành tặng các bạn nữ sinh viên với giao diện lưới tim hồng đáng yêu, hiệu ứng trái tim ngập tràn.">
+  <meta property="og:title" content="Chúc Mừng 20/10 - Nữ Sinh Viên Tỏa Sáng 💖">
+  <meta property="og:description" content="Chúc các bạn nữ sinh viên luôn xinh đẹp rạng rỡ, GPA 4.0, qua môn điểm A+ và săn học bổng liền tay!">
   
-  <!-- Google Fonts: Đáng yêu, mềm mại, thanh lịch -->
+  <!-- Google Fonts: Đáng yêu, thanh xuân, ngọt ngào -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -22,178 +22,205 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Canvas nền hiệu ứng cánh hoa bay & tim lấp lánh -->
+  <!-- Lớp phủ lưới nét đứt & giao điểm trái tim trắng -->
+  <div class="heart-grid-bg"></div>
+
+  <!-- Canvas hiệu ứng ngập tràn trái tim & hạt sáng lơ lửng -->
   <canvas id="ambient-canvas"></canvas>
 
-  <!-- Nút điều khiển âm thanh & bắn tim góc trên -->
+  <!-- Nút điều khiển nổi góc trên màn hình -->
   <div class="top-nav-controls">
-    <button id="music-btn" class="cute-ctrl-btn" title="Bật/Tắt nhạc nền dễ thương" aria-label="Bật/Tắt nhạc">
+    <button id="music-btn" class="cute-ctrl-btn" title="Bật/Tắt giai điệu thanh xuân" aria-label="Bật/Tắt nhạc">
       <i class="fa-solid fa-music"></i>
       <div class="music-wave">
         <span></span><span></span><span></span>
       </div>
     </button>
-    <button id="burst-btn" class="cute-ctrl-btn" title="Bắn mưa tim & hoa" aria-label="Bắn mưa tim">
-      <i class="fa-solid fa-wand-magic-sparkles"></i>
+    <button id="burst-btn" class="cute-ctrl-btn" title="Bắn mưa tim chúc mừng" aria-label="Bắn mưa tim">
+      <i class="fa-solid fa-heart-pulse"></i>
     </button>
   </div>
 
   <!-- =================================================================
-       6 ẢNH XUNG QUANH MÀN HÌNH (DECORATIVE SURROUNDING PHOTOS)
+       HỆ THỐNG 6 ẢNH BAO QUANH LÀM TÔN VINH THIỆP CHÍNH GIỮA
+       Bố cục dạng 2 cánh (Trái - Phải) hướng trọng tâm về thiệp
        ================================================================= -->
-  <aside class="surrounding-photos-wrapper" aria-label="Bộ sưu tập ảnh dễ thương">
-    <!-- Góc trên bên trái -->
-    <div class="cute-photo-card photo-top-left" data-title="Xinh đẹp rạng rỡ">
-      <div class="washi-tape"></div>
-      <div class="photo-img-frame">
-        <img src="Picture/Cat1.jpg" alt="Mèo con xinh đẹp" loading="eager">
+  <div class="stage-wrapper">
+    <!-- Cánh ảnh bên trái (Left Wing) -->
+    <aside class="photo-wing wing-left" aria-label="Ảnh kỷ niệm bên trái">
+      <!-- Ảnh 1: Góc trên trái -->
+      <div class="cute-photo-card photo-card-1" data-title="Điểm A+ qua môn xuất sắc 💯">
+        <div class="washi-tape"></div>
+        <div class="heart-sticker">💖</div>
+        <div class="photo-img-frame">
+          <img src="Picture/Cat1.jpg" alt="Mèo chăm học điểm A+" loading="eager">
+        </div>
+        <div class="photo-tag">
+          <span>GPA 4.0 💯</span>
+        </div>
       </div>
-      <div class="photo-tag">
-        <span>Xinh Đẹp 🌸</span>
-      </div>
-    </div>
 
-    <!-- Góc trên bên phải -->
-    <div class="cute-photo-card photo-top-right" data-title="Đáng yêu số 1">
-      <div class="washi-tape"></div>
-      <div class="photo-img-frame">
-        <img src="Picture/cat2.jpg" alt="Mèo con đáng yêu" loading="eager">
+      <!-- Ảnh 2: Cạnh giữa trái -->
+      <div class="cute-photo-card photo-card-2" data-title="Học bổng trong tầm tay 🎓">
+        <div class="washi-tape"></div>
+        <div class="heart-sticker">✨</div>
+        <div class="photo-img-frame">
+          <img src="Picture/cat3.jpg" alt="Mèo săn học bổng" loading="eager">
+        </div>
+        <div class="photo-tag">
+          <span>Săn Học Bổng 🎓</span>
+        </div>
       </div>
-      <div class="photo-tag">
-        <span>Đáng Yêu ✨</span>
-      </div>
-    </div>
 
-    <!-- Cạnh giữa bên trái -->
-    <div class="cute-photo-card photo-mid-left" data-title="Ngập tràn niềm vui">
-      <div class="washi-tape"></div>
-      <div class="photo-img-frame">
-        <img src="Picture/cat3.jpg" alt="Mèo con vui vẻ" loading="eager">
+      <!-- Ảnh 3: Góc dưới trái -->
+      <div class="cute-photo-card photo-card-3" data-title="Xinh đẹp nhất giảng đường 🌸">
+        <div class="washi-tape"></div>
+        <div class="heart-sticker">🌸</div>
+        <div class="photo-img-frame">
+          <img src="Picture/cat5.jpg" alt="Mèo hoa khôi giảng đường" loading="eager">
+        </div>
+        <div class="photo-tag">
+          <span>Hoa Khôi Lớp 🌸</span>
+        </div>
       </div>
-      <div class="photo-tag">
-        <span>Hạnh Phúc 💖</span>
-      </div>
-    </div>
+    </aside>
 
-    <!-- Cạnh giữa bên phải -->
-    <div class="cute-photo-card photo-mid-right" data-title="Bình an ngọt ngào">
-      <div class="washi-tape"></div>
-      <div class="photo-img-frame">
-        <img src="Picture/cat4.jfif" alt="Mèo con ngoan ngoãn" loading="eager">
-      </div>
-      <div class="photo-tag">
-        <span>Bình Yên 🍀</span>
-      </div>
-    </div>
+    <!-- =================================================================
+         KHU VỰC TRUNG TÂM (TRỌNG TÂM THIỆP CHÚC MỪNG 20/10)
+         ================================================================= -->
+    <main class="center-stage">
+      <!-- Tiêu đề sinh viên rực rỡ -->
+      <header class="stage-header">
+        <div class="badge-student">
+          <i class="fa-solid fa-graduation-cap"></i> 20 Tháng 10 • Chúc Mừng Các Bạn Nữ Sinh Viên <i class="fa-solid fa-heart"></i>
+        </div>
+        <h1 class="stage-title">
+          Tôn Vinh <span class="sparkle-pink">Phái Đẹp Giảng Đường</span>
+        </h1>
+        <p class="stage-sub">
+          Chúc một nửa thế giới sinh viên luôn xinh đẹp rạng rỡ, qua môn điểm A+ và ngập tràn hạnh phúc! 💖
+        </p>
+      </header>
 
-    <!-- Góc dưới bên trái -->
-    <div class="cute-photo-card photo-bottom-left" data-title="Cưng như công chúa">
-      <div class="washi-tape"></div>
-      <div class="photo-img-frame">
-        <img src="Picture/cat5.jpg" alt="Mèo con đáng yêu 5" loading="eager">
-      </div>
-      <div class="photo-tag">
-        <span>Công Chúa 👑</span>
-      </div>
-    </div>
+      <!-- THIỆP CHÚC MỪNG CHÍNH (THE HERO CARD) -->
+      <section class="magic-card">
+        <!-- Huy hiệu trái tim đập nhịp nhàng đỉnh thiệp -->
+        <div class="card-heart-crest">
+          <i class="fa-solid fa-heart"></i>
+          <span>Happy 20/10</span>
+          <i class="fa-solid fa-heart"></i>
+        </div>
 
-    <!-- Góc dưới bên phải -->
-    <div class="cute-photo-card photo-bottom-right" data-title="Tỏa sáng rạng ngời">
-      <div class="washi-tape"></div>
-      <div class="photo-img-frame">
-        <img src="Picture/cat6.jfif" alt="Mèo con đáng yêu 6" loading="eager">
-      </div>
-      <div class="photo-tag">
-        <span>Rạng Ngời ☀️</span>
-      </div>
-    </div>
-  </aside>
+        <!-- 4 Nhóm đối tượng sinh viên -->
+        <nav class="category-pills" role="tablist">
+          <button class="pill-btn active" data-category="classmate">
+            <i class="fa-solid fa-users"></i> Bạn Cùng Lớp
+          </button>
+          <button class="pill-btn" data-category="deadline">
+            <i class="fa-solid fa-laptop-code"></i> Team Deadline
+          </button>
+          <button class="pill-btn" data-category="bestie">
+            <i class="fa-solid fa-face-kiss-wink-heart"></i> Cạ Cứng
+          </button>
+          <button class="pill-btn" data-category="crush">
+            <i class="fa-solid fa-heart-pulse"></i> Crush Giảng Đường
+          </button>
+        </nav>
 
-  <!-- =================================================================
-       KHU VỰC TRUNG TÂM (CHÍNH GIỮA MÀN HÌNH - KHÔNG CẦN SCROLL)
-       ================================================================= -->
-  <main class="center-stage">
-    <!-- Header xinh xắn -->
-    <header class="stage-header">
-      <div class="badge-2010">
-        <i class="fa-solid fa-heart"></i> 20 Tháng 10 • Ngày Phụ Nữ Việt Nam <i class="fa-solid fa-heart"></i>
-      </div>
-      <h1 class="stage-title">
-        Chúc Mừng <span class="sparkle-pink">Phụ Nữ Việt Nam</span>
-      </h1>
-      <p class="stage-sub">
-        Gửi ngàn đóa hoa và triệu tình yêu thương tới những người phụ nữ tuyệt vời! 💐
-      </p>
-    </header>
+        <!-- Nội dung thư tay chúc mừng -->
+        <div class="letter-box" id="letter-box">
+          <div class="corner-heart top-l">💖</div>
+          <div class="corner-heart top-r">💖</div>
+          <div class="corner-heart bot-l">💖</div>
+          <div class="corner-heart bot-r">💖</div>
 
-    <!-- Thẻ thiệp chúc mừng trung tâm (Interactive Card) -->
-    <section class="magic-card">
-      <!-- Tabs chọn chủ đề lời chúc -->
-      <nav class="category-pills" role="tablist">
-        <button class="pill-btn active" data-category="mom">
-          <i class="fa-solid fa-heart"></i> Mẹ Yêu
-        </button>
-        <button class="pill-btn" data-category="lover">
-          <i class="fa-solid fa-gem"></i> Người Yêu
-        </button>
-        <button class="pill-btn" data-category="sister">
-          <i class="fa-solid fa-sun"></i> Chị / Em
-        </button>
-        <button class="pill-btn" data-category="colleague">
-          <i class="fa-solid fa-champagne-glasses"></i> Bạn Bè
-        </button>
-      </nav>
-
-      <!-- Nội dung bức thư -->
-      <div class="letter-box" id="letter-box">
-        <div class="letter-decor-heart">💖</div>
-        <div class="letter-inner">
-          <div class="letter-to" id="display-to">
-            <span>Thân gửi:</span> <strong id="recipient-name">Người Phụ Nữ Tuyệt Vời</strong>
-          </div>
-          <p class="letter-text" id="wish-content">
-            Nhân ngày 20/10, chúc bạn luôn ngập tràn niềm vui, nụ cười rạng rỡ như ánh bình minh, xinh đẹp như những đóa hồng ban mai và luôn được yêu thương mỗi ngày! 🌸
-          </p>
-          <div class="letter-from" id="display-from">
-            <span>Thương mến,</span>
-            <strong id="sender-name">Người Yêu Quý Bạn ❤️</strong>
+          <div class="letter-inner">
+            <div class="letter-to" id="display-to">
+              <span>Thân gửi:</span> <strong id="recipient-name">Các Bạn Nữ Lớp Mình</strong> 🌸
+            </div>
+            <p class="letter-text" id="wish-content">
+              Nhân ngày 20/10, chúc toàn thể các bạn nữ sinh viên lớp mình luôn ngập tràn niềm vui, xinh đẹp rạng rỡ, đồ án qua vèo vèo, săn học bổng mỏi tay và mãi là những đóa hoa tỏa sáng nhất giảng đường! 🎓✨
+            </p>
+            <div class="letter-from" id="display-from">
+              <span>Từ:</span>
+              <strong id="sender-name">Hội Nam Sinh Lớp Mình 💖</strong>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Tùy chỉnh người nhận / người gửi siêu nhanh -->
-      <div class="quick-customize">
-        <div class="input-cute-wrap">
-          <i class="fa-solid fa-user-heart"></i>
-          <input type="text" id="name-recipient-input" placeholder="Tên người nhận (ví dụ: Mẹ yêu, Lan Anh...)">
+        <!-- Tùy biến người nhận / người gửi cực nhanh -->
+        <div class="quick-customize">
+          <div class="input-cute-wrap">
+            <i class="fa-solid fa-heart"></i>
+            <input type="text" id="name-recipient-input" placeholder="Gửi bạn: Lan Anh, Bạn cùng bàn, Nữ sinh khoa CNTT...">
+          </div>
+          <div class="input-cute-wrap">
+            <i class="fa-solid fa-pen-fancy"></i>
+            <input type="text" id="name-sender-input" placeholder="Tên bạn gửi: Cạ cứng, Anh em bàn cuối...">
+          </div>
         </div>
-        <div class="input-cute-wrap">
-          <i class="fa-solid fa-signature"></i>
-          <input type="text" id="name-sender-input" placeholder="Tên bạn gửi...">
+
+        <!-- Thanh nút bấm hành động -->
+        <div class="card-action-bar">
+          <button id="next-wish-btn" class="action-btn btn-cute-outline" title="Đổi lời chúc khác">
+            <i class="fa-solid fa-rotate"></i> Đổi lời chúc
+          </button>
+          <button id="copy-wish-btn" class="action-btn btn-cute-pink" title="Sao chép lời chúc">
+            <i class="fa-regular fa-copy"></i> Sao chép lời chúc
+          </button>
+          <button id="share-link-btn" class="action-btn btn-cute-gold" title="Sao chép liên kết có tên">
+            <i class="fa-solid fa-share-nodes"></i> Gửi tặng link này
+          </button>
+        </div>
+      </section>
+
+      <!-- Mini Footer sinh viên -->
+      <footer class="stage-footer">
+        <span>✨ Thanh xuân rực rỡ • Thi cử suôn sẻ • Tươi vui mỗi ngày ✨</span>
+      </footer>
+    </main>
+
+    <!-- Cánh ảnh bên phải (Right Wing) -->
+    <aside class="photo-wing wing-right" aria-label="Ảnh kỷ niệm bên phải">
+      <!-- Ảnh 4: Góc trên phải -->
+      <div class="cute-photo-card photo-card-4" data-title="Đáng yêu hết phần thiên hạ ✨">
+        <div class="washi-tape"></div>
+        <div class="heart-sticker">🎀</div>
+        <div class="photo-img-frame">
+          <img src="Picture/cat2.jpg" alt="Mèo đáng yêu siêu cấp" loading="eager">
+        </div>
+        <div class="photo-tag">
+          <span>Đáng Yêu Số 1 ✨</span>
         </div>
       </div>
 
-      <!-- Các nút thao tác chính -->
-      <div class="card-action-bar">
-        <button id="next-wish-btn" class="action-btn btn-cute-outline" title="Đổi lời chúc khác">
-          <i class="fa-solid fa-rotate"></i> Đổi lời chúc
-        </button>
-        <button id="copy-wish-btn" class="action-btn btn-cute-pink" title="Sao chép lời chúc">
-          <i class="fa-regular fa-copy"></i> Sao chép lời chúc
-        </button>
-        <button id="share-link-btn" class="action-btn btn-cute-gold" title="Sao chép liên kết có tên">
-          <i class="fa-solid fa-share-nodes"></i> Gửi tặng link này
-        </button>
+      <!-- Ảnh 5: Cạnh giữa phải -->
+      <div class="cute-photo-card photo-card-5" data-title="Bình tĩnh chiến thắng mọi deadline 🍀">
+        <div class="washi-tape"></div>
+        <div class="heart-sticker">🍀</div>
+        <div class="photo-img-frame">
+          <img src="Picture/cat4.jfif" alt="Mèo chiến thần chạy deadline" loading="eager">
+        </div>
+        <div class="photo-tag">
+          <span>Vượt Deadline 🍀</span>
+        </div>
       </div>
-    </section>
 
-    <!-- Mini Footer -->
-    <footer class="stage-footer">
-      <span>🌸 Luôn xinh đẹp, tự tin & ngập tràn hạnh phúc mỗi ngày! 🌸</span>
-    </footer>
-  </main>
+      <!-- Ảnh 6: Góc dưới phải -->
+      <div class="cute-photo-card photo-card-6" data-title="Thanh xuân rực rỡ bên nhau ☀️">
+        <div class="washi-tape"></div>
+        <div class="heart-sticker">☀️</div>
+        <div class="photo-img-frame">
+          <img src="Picture/cat6.jfif" alt="Mèo thanh xuân tỏa sáng" loading="eager">
+        </div>
+        <div class="photo-tag">
+          <span>Thanh Xuân ☀️</span>
+        </div>
+      </div>
+    </aside>
+  </div>
 
-  <!-- Modal phóng to ảnh khi click -->
+  <!-- Modal xem ảnh phóng to -->
   <div id="photo-modal" class="photo-modal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-backdrop" id="modal-backdrop"></div>
     <div class="modal-content">
@@ -203,13 +230,13 @@
     </div>
   </div>
 
-  <!-- Thông báo Toast ngọt ngào -->
+  <!-- Toast thông báo ngọt ngào -->
   <div id="toast" class="cute-toast" role="alert" aria-live="polite">
     <i class="fa-solid fa-heart"></i>
     <span id="toast-message">Đã sao chép lời chúc thành công!</span>
   </div>
 
-  <!-- Script xử lý -->
+  <!-- Script điều khiển -->
   <script src="script.js"></script>
 </body>
 </html>
