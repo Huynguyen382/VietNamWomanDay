@@ -4,28 +4,28 @@
  */
 
 // ==========================================================================
-// 1. KHO LỜI CHÚC Ý NGHĨA DÀNH CHO NỮ SINH VIÊN
+// 1. KHO LỜI CHÚC Ý NGHĨA DÀNH CHO CÁC BẠN NỮ
 // ==========================================================================
 const WISHES = {
   classmate: [
-    "Nhân ngày 20/10, chúc toàn thể các bạn nữ lớp mình luôn ngập tràn niềm vui, xinh đẹp rạng rỡ, đồ án qua vèo vèo, săn học bổng mỏi tay và mãi là những đóa hoa tỏa sáng nhất giảng đường! 🎓🌸",
-    "Chúc các bạn nữ lớp mình một ngày 20/10 ngập tràn hoa và quà! Chúc các bạn kỳ này GPA chạm đỉnh 4.0, thi môn nào điểm A môn đó, không bao giờ phải lo thi lại và luôn tươi vui mỗi ngày! 💯✨",
-    "Gửi các bóng hồng của lớp mình: Cảm ơn các bạn đã luôn mang lại năng lượng tích cực và sự ấm áp cho cả lớp. Chúc các bạn ngày 20/10 thật ngọt ngào, hạnh phúc và có một thời thanh xuân rực rỡ nhất! 💖"
+    "Nhân ngày 20/10, chúc bạn luôn ngập tràn niềm vui, nụ cười rạng rỡ, học tập và công việc đều hanh thông, luôn được yêu thương chiều chuộng và mãi là đóa hoa xinh đẹp nhất! 🌸💖",
+    "Chúc bạn một ngày 20/10 thật ngọt ngào và nhận được thật nhiều hoa quà! Chúc bạn luôn tràn đầy năng lượng tích cực, thi cử hay công việc đều đạt kết quả xuất sắc và mỗi ngày đều là một ngày hạnh phúc! ✨💯",
+    "Gửi bạn nữ tuyệt vời: Cảm ơn bạn đã luôn mang lại sự ấm áp và niềm vui cho mọi người xung quanh. Chúc bạn ngày 20/10 nhận được thật nhiều yêu thương và hạnh phúc trọn vẹn! 💖💐"
   ],
   deadline: [
-    "Chúc team chị em chạy deadline ngày 20/10 thật ngọt ngào! Dù bài tập lớn, thuyết trình hay đồ án có khó đến đâu thì chúng mình vẫn luôn xinh đẹp, rạng ngời và cùng nhau 'hạ gục' mọi môn học xuất sắc! 💻🌸",
-    "20/10 chúc hội bạn cùng cày tiểu luận: Deadline tự động lùi xa, bug tự động biến mất, giảng viên khen nức nở và điểm quá trình lúc nào cũng full điểm nhé! Cố lên những chiến thần học tập! 🍀✨",
-    "Gửi hội chị em đồng cam cộng khổ: Hôm nay là 20/10, gác lại âu lo deadline sang một bên để tận hưởng trọn vẹn ngày của phái đẹp nhé. Chúc các bạn luôn tự tin, bản lĩnh và sớm rinh học bổng về tay! 👑💖"
+    "Chúc chị em đồng nghiệp ngày 20/10 thật ngọt ngào và rạng rỡ! Dù deadline hay công việc có bận rộn đến đâu thì chúng mình vẫn luôn xinh đẹp, tự tin và cùng nhau chinh phục mọi mục tiêu xuất sắc! 💻🌸",
+    "20/10 chúc phái đẹp team mình: Deadline tự động lùi xa, công việc trôi chảy, sếp khen ngợi, khách hàng hài lòng và luôn tràn đầy nhiệt huyết nhé! Cố lên những cô gái tài năng! 🍀✨",
+    "Gửi người đồng hành tuyệt vời: Hôm nay là 20/10, hãy gác lại âu lo công việc để tận hưởng trọn vẹn ngày của phái đẹp nhé. Chúc bạn luôn bản lĩnh, thành công và sớm gặt hái thêm nhiều thành tựu lớn! 👑💖"
   ],
   bestie: [
-    "Nhân ngày 20/10, chúc cạ cứng của tớ luôn xinh đẹp hết phần thiên hạ, deadline không bao giờ dí, đi thi khoanh bừa cũng trúng và sớm tìm được một anh người yêu chuẩn gu bao ăn trưa mỗi ngày nhé! 👭💖",
-    "Chúc người bạn thân tuyệt vời nhất của tớ một ngày 20/10 thật rạng rỡ! Cảm ơn cậu đã luôn cùng tớ chia sẻ từng gói mì tôm, từng buổi học sáng sớm và mọi buồn vui thời sinh viên. Yêu cậu nhiều! 🌸✨",
-    "Gửi cạ cứng: Chúc cậu ngày 20/10 nhận được thật nhiều yêu thương! Mong cậu luôn giữ nụ cười hồn nhiên, tự tin tỏa sáng theo cách riêng và luôn thành công trên con đường đã chọn nhé! 🎀❤️"
+    "Nhân ngày 20/10, chúc cạ cứng của tớ luôn xinh đẹp hết phần thiên hạ, tiền đầy túi, tình đầy tim, đi đâu cũng gặp may và sớm có người yêu chuẩn gu cưng chiều hết nấc nhé! 👭💖",
+    "Chúc bạn thân tuyệt vời nhất của tớ một ngày 20/10 thật rực rỡ! Cảm ơn cậu đã luôn ở bên lắng nghe, sẻ chia từng khoảnh khắc buồn vui cuộc sống. Yêu cậu nhiều! 🌸✨",
+    "Gửi cạ cứng: Chúc cậu ngày 20/10 nhận được thật nhiều quà và hoa! Chúc cậu luôn tự tin tỏa sáng theo cách riêng, công việc thuận lợi và luôn có tớ đồng hành phía sau nhé! 🎀❤️"
   ],
   crush: [
-    "Gửi cô bạn bàn bên: Chúc bạn ngày 20/10 nhận được thật nhiều niềm vui! Nụ cười của bạn chính là động lực giúp cả giảng đường bừng sáng và xua tan mọi mệt mỏi mùa thi cử đấy. Luôn hạnh phúc nhé! ✨💖",
-    "Chúc nàng thơ của giảng đường một ngày 20/10 thật dịu dàng, ấm áp và luôn mỉm cười thật tươi. Hy vọng thanh xuân của bạn sẽ luôn tràn ngập những điều ngọt ngào và kỳ diệu nhất! 🌹🌸",
-    "Ngày Phụ nữ Việt Nam, mong rằng mọi điều tốt đẹp nhất sẽ đến với bạn. Chúc bạn luôn xinh đẹp, học tập thật tốt và luôn có những khoảnh khắc thanh xuân đáng nhớ bên bạn bè! 💌✨"
+    "Chúc nàng thơ của tớ một ngày 20/10 thật dịu dàng, ấm áp và luôn mỉm cười thật tươi. Nụ cười của bạn chính là điều ngọt ngào nhất làm bừng sáng cả một ngày đấy! ✨💖",
+    "Ngày Phụ nữ Việt Nam, mong rằng mọi điều tốt đẹp và kỳ diệu nhất sẽ đến với bạn. Chúc bạn luôn xinh đẹp, an yên và được nâng niu như một nàng công chúa! 🌹🌸",
+    "Gửi người đặc biệt: Chúc bạn ngày 20/10 ngập tràn hạnh phúc! Hy vọng mỗi ngày trôi qua với bạn đều ngọt ngào, và hy vọng tớ sẽ có cơ hội mang lại nụ cười cho bạn nhiều hơn nữa! 💌✨"
   ]
 };
 
@@ -373,7 +373,7 @@ burstBtn.addEventListener('click', () => {
   const rect = burstBtn.getBoundingClientRect();
   spawnBurst(rect.left + 22, rect.top + 22, 35);
   playChimeTone(880, 0.35);
-  showToast("Chúc mừng các bạn nữ sinh viên! 💖🎓");
+  showToast("Chúc mừng các bạn nữ ngày 20/10! 💖🌸");
 });
 
 // ==========================================================================
@@ -421,16 +421,16 @@ copyWishBtn.addEventListener('click', async () => {
 });
 
 // ==========================================================================
-// 6. CÁ NHÂN HÓA TÊN SINH VIÊN
+// 6. CÁ NHÂN HÓA TÊN NGƯỜI NHẬN / NGƯỜI GỬI
 // ==========================================================================
 inputRecipient.addEventListener('input', () => {
   const val = inputRecipient.value.trim();
-  recipientName.textContent = val ? val : "Các Bạn Nữ Lớp Mình";
+  recipientName.textContent = val ? val : "Các Bạn Nữ Tuyệt Vời";
 });
 
 inputSender.addEventListener('input', () => {
   const val = inputSender.value.trim();
-  senderName.textContent = val ? `${val} 💖` : "Hội Nam Sinh Lớp Mình 💖";
+  senderName.textContent = val ? `${val} 💖` : "Người gửi lời chúc 💖";
 });
 
 shareLinkBtn.addEventListener('click', async () => {
@@ -487,7 +487,7 @@ photoCards.forEach(card => {
 
     if (img) {
       modalImg.src = img.src;
-      modalCaption.textContent = title || "Kỷ niệm thanh xuân đáng yêu 🎓🌸";
+      modalCaption.textContent = title || "Chú mèo cute tặng hoa ngày 20/10 🌸🐱";
       photoModal.classList.add('show');
       photoModal.setAttribute('aria-hidden', 'false');
     }
@@ -508,38 +508,38 @@ window.addEventListener('keydown', (e) => {
 });
 
 // ==========================================================================
-// 8. HỘP QUÀ MAY MẮN 20/10 (BỐC QUẺ VUI DÀNH CHO NỮ SINH VIÊN)
+// 8. HỘP QUÀ MAY MẮN 20/10 (BỐC QUẺ VUI DÀNH CHO CÁC BẠN NỮ)
 // ==========================================================================
-const STUDENT_FORTUNES = [
-  {
-    title: "Chiến Thần Học Tập 💯",
-    desc: "Chúc bạn kỳ này thi cử nhẹ tựa lông hồng, khoanh bừa trúng tủ, GPA chạm đỉnh 4.0 và ẵm trọn học bổng xuất sắc về tay! 🎓✨",
-    tags: ["💯 GPA 4.0", "🎓 Săn Học Bổng", "✨ Điểm A+"]
-  },
-  {
-    title: "Hoa Khôi Giảng Đường 👑",
-    desc: "Nhan sắc thăng hạng vượt bậc, nụ cười tỏa nắng làm bừng sáng cả hội trường. Crush chủ động inbox rủ đi trà sữa và bao ăn trưa mỗi ngày! 💖🌸",
-    tags: ["👑 Xinh Đẹp 1000%", "💖 Crush Tỏ Tình", "🌸 Rạng Rỡ"]
-  },
-  {
-    title: "Khắc Tinh Của Deadline 💻",
-    desc: "Deadline tự động lùi xa, bài tập nhóm toàn đồng đội gánh team đỉnh cao, slide thuyết trình siêu mượt, thầy cô gật đầu khen nức nở! 🍀✨",
-    tags: ["🍀 Né Deadline", "💻 Team Đỉnh Cao", "✨ Điểm A+"]
-  },
-  {
-    title: "Tiểu Thư Bình Yên ☀️",
-    desc: "Sáng thức dậy đúng giờ, đi học không kẹt xe, canteen còn món yêu thích, ví tiền lúc nào cũng rủng rỉnh và tâm trạng luôn vui phơi phới! 🎀💐",
-    tags: ["☀️ Tươi Vui", "🎀 Ví Luôn Đầy", "💐 Hạnh Phúc"]
-  },
+const LUCKY_FORTUNES = [
   {
     title: "Nữ Thần May Mắn 🍀",
-    desc: "Điểm danh không bao giờ trúng lúc vắng, bốc thăm trúng quà to, kiểm tra 15 phút đúng ngay câu vừa đọc lướt, vạn sự hanh thông! 🌟🎉",
-    tags: ["🍀 Siêu May Mắn", "🌟 Trúng Tủ", "🎉 Vui Vẻ"]
+    desc: "Chúc bạn vạn sự như ý, công việc học tập thuận buồm xuôi gió, ra đường gặp may, về nhà ấm êm, muốn gì được nấy! ✨🎉",
+    tags: ["🍀 Vạn Sự Hanh Thông", "🌟 Siêu May Mắn", "🎉 Trọn Vẹn"]
   },
   {
-    title: "Cạ Cứng Quốc Dân 👭",
-    desc: "Có hội bạn thân luôn kề vai sát cánh, cùng nhau vượt qua mọi mùa thi cử, chụp ảnh sống ảo triệu like và lưu giữ thanh xuân rực rỡ nhất! 📸❤️",
-    tags: ["👭 Tình Bạn Diệu Kỳ", "📸 Ảnh Đẹp", "❤️ Thanh Xuân"]
+    title: "Xinh Đẹp Rạng Ngời 👑",
+    desc: "Nhan sắc ngày càng thăng hạng, nụ cười tỏa nắng rạng rỡ, ra đường ai cũng ngoái nhìn, nhận hoa mỏi tay và luôn là tâm điểm ngọt ngào! 💖🌸",
+    tags: ["👑 Xinh Đẹp 1000%", "🌸 Tỏa Sáng", "💖 Rạng Rỡ"]
+  },
+  {
+    title: "Ví Tiền Rủng Rỉnh 💰",
+    desc: "Công việc kinh doanh hanh thông, thu nhập tăng vọt, săn sale trúng lớn, shopping thả ga không cần nhìn giá, cả năm sung túc! 🎀✨",
+    tags: ["💰 Tiền Về Đầy Túi", "🎀 Shopping Mỏi Tay", "✨ Sung Túc"]
+  },
+  {
+    title: "Bình Yên & Hạnh Phúc ☀️",
+    desc: "Mỗi ngày trôi qua đều ngập tràn niềm vui, không chút âu lo muộn phiền, luôn có những người thương yêu bên cạnh chiều chuộng hết mực! 💐❤️",
+    tags: ["☀️ Tâm Trạng Tươi Vui", "💐 Bình Yên", "❤️ Được Chiều Chuộng"]
+  },
+  {
+    title: "Chiến Thần Thành Công 💯",
+    desc: "Mọi mục tiêu đặt ra đều hoàn thành xuất sắc, thi cử hay công việc đều thăng tiến vượt bậc, ai ai cũng ngưỡng mộ và yêu quý! 🌟🏆",
+    tags: ["💯 Điểm 10 Tuyệt Đối", "🏆 Thành Công Lớn", "🌟 Xuất Sắc"]
+  },
+  {
+    title: "Tình Duyên Ngọt Ngào 💌",
+    desc: "Sớm gặp được người chuẩn gu tâm đầu ý hợp, được nâng niu như công chúa, tình cảm thăng hoa ngọt ngào tựa như phim Hàn Quốc! 🌹💕",
+    tags: ["💌 Chân Ái Chuẩn Gu", "🌹 Được Yêu Thương", "💕 Ngọt Ngào"]
   }
 ];
 
@@ -555,45 +555,62 @@ const giftResultTags = document.getElementById('gift-result-tags');
 let lastFortuneIndex = -1;
 
 function drawFortune() {
-  let rand;
-  do {
-    rand = Math.floor(Math.random() * STUDENT_FORTUNES.length);
-  } while (rand === lastFortuneIndex && STUDENT_FORTUNES.length > 1);
-  lastFortuneIndex = rand;
-  const f = STUDENT_FORTUNES[rand];
+  try {
+    let rand;
+    do {
+      rand = Math.floor(Math.random() * LUCKY_FORTUNES.length);
+    } while (rand === lastFortuneIndex && LUCKY_FORTUNES.length > 1);
+    lastFortuneIndex = rand;
+    const f = LUCKY_FORTUNES[rand];
 
-  giftResultTitle.textContent = f.title;
-  giftResultDesc.textContent = f.desc;
-  giftResultTags.innerHTML = f.tags.map(t => `<span>${t}</span>`).join('');
+    if (giftResultTitle) giftResultTitle.textContent = f.title;
+    if (giftResultDesc) giftResultDesc.textContent = f.desc;
+    if (giftResultTags) {
+      giftResultTags.innerHTML = f.tags.map(t => `<span>${t}</span>`).join('');
+    }
+  } catch (err) {
+    console.error("Lỗi bốc quẻ:", err);
+  }
 
-  // Tung pháo hoa tim chúc mừng
-  spawnBurst(window.innerWidth / 2, window.innerHeight * 0.45, isMobileDevice ? 14 : 26);
-  playChimeTone(880, 0.35);
+  try {
+    spawnBurst(window.innerWidth / 2, window.innerHeight * 0.45, isMobileDevice ? 14 : 26);
+    playChimeTone(880, 0.35);
+  } catch (err) {
+    console.error("Lỗi hiệu ứng:", err);
+  }
 }
+window.drawFortune = drawFortune;
 
-if (luckyGiftBtn) {
-  luckyGiftBtn.addEventListener('click', () => {
-    drawFortune();
+function openGiftModal(e) {
+  if (e && e.stopPropagation) e.stopPropagation();
+  drawFortune();
+  if (giftModal) {
     giftModal.classList.add('show');
     giftModal.setAttribute('aria-hidden', 'false');
-  });
+  }
 }
+window.openGiftModal = openGiftModal;
 
-if (giftAgainBtn) {
-  giftAgainBtn.addEventListener('click', () => {
-    drawFortune();
-  });
-}
-
-function closeGiftModal() {
+function closeGiftModal(e) {
+  if (e && e.stopPropagation) e.stopPropagation();
   if (giftModal) {
     giftModal.classList.remove('show');
     giftModal.setAttribute('aria-hidden', 'true');
   }
 }
+window.closeGiftModal = closeGiftModal;
+
+if (luckyGiftBtn) {
+  luckyGiftBtn.addEventListener('click', openGiftModal);
+}
+
+if (giftAgainBtn) {
+  giftAgainBtn.addEventListener('click', drawFortune);
+}
 
 if (giftClose) giftClose.addEventListener('click', closeGiftModal);
 if (giftBackdrop) giftBackdrop.addEventListener('click', closeGiftModal);
+
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && giftModal && giftModal.classList.contains('show')) {
     closeGiftModal();

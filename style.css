@@ -675,6 +675,12 @@ html, body {
   text-align: left;
   box-shadow: 0 4px 12px rgba(224, 17, 95, 0.12);
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.lucky-gift-btn * {
+  pointer-events: none;
 }
 
 .lucky-gift-btn:hover {
@@ -837,22 +843,21 @@ html, body {
    ========================================================================== */
 .photo-modal {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 99990 !important;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
 }
 
 .photo-modal.show {
-  opacity: 1;
-  pointer-events: auto;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .modal-backdrop {
@@ -926,22 +931,21 @@ html, body {
    ========================================================================== */
 .gift-modal {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1050;
+  z-index: 99999 !important;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
 }
 
 .gift-modal.show {
-  opacity: 1;
-  pointer-events: auto;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .gift-modal-card {

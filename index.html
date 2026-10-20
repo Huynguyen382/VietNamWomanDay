@@ -48,22 +48,22 @@
   <div class="stage-wrapper">
     <!-- KHU VỰC TRUNG TÂM (TRỌNG TÂM THIỆP CHÚC MỪNG 20/10) -->
     <main class="center-stage">
-      <!-- Tiêu đề sinh viên rực rỡ -->
+      <!-- Tiêu đề rực rỡ -->
       <header class="stage-header">
         <div class="badge-student">
-          <i class="fa-solid fa-crown"></i> 20 Tháng 10 • Tôn Vinh Nữ Sinh Viên <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-crown"></i> 20 Tháng 10 • Chúc Mừng Các Bạn Nữ <i class="fa-solid fa-heart"></i>
         </div>
         <h1 class="stage-title">
           Happy <span class="sparkle-pink">Vietnam Women's Day</span> 🌸
         </h1>
         <p class="stage-sub">
-          Chúc một nửa thế giới luôn rạng ngời như hoa, GPA 4.0 và ngập tràn hạnh phúc! ✨💖
+          Chúc một nửa thế giới luôn xinh đẹp rạng rỡ, ngập tràn niềm vui và hạnh phúc mỗi ngày! ✨💖
         </p>
 
-        <!-- Dải chỉ số may mắn & độ xinh đẹp K-pop style -->
+        <!-- Dải chỉ số may mắn & độ xinh đẹp -->
         <div class="cute-status-strip">
           <div class="status-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Độ Xinh Đẹp: <strong>1000% ✨</strong></div>
-          <div class="status-pill"><i class="fa-solid fa-graduation-cap"></i> GPA Kỳ Này: <strong>A+ 💯</strong></div>
+          <div class="status-pill"><i class="fa-solid fa-face-smile-beam"></i> Niềm Vui: <strong>Trọn Vẹn 💖</strong></div>
           <div class="status-pill"><i class="fa-solid fa-clover"></i> May Mắn: <strong>Vô Cực 🍀</strong></div>
         </div>
       </header>
@@ -77,19 +77,19 @@
           <i class="fa-solid fa-heart"></i>
         </div>
 
-        <!-- 4 Nhóm đối tượng sinh viên -->
+        <!-- 4 Nhóm đối tượng -->
         <nav class="category-pills" role="tablist">
           <button class="pill-btn active" data-category="classmate">
-            <i class="fa-solid fa-users"></i> Bạn Cùng Lớp
+            <i class="fa-solid fa-users"></i> Bạn Bè
           </button>
           <button class="pill-btn" data-category="deadline">
-            <i class="fa-solid fa-laptop-code"></i> Team Deadline
+            <i class="fa-solid fa-briefcase"></i> Đồng Nghiệp
           </button>
           <button class="pill-btn" data-category="bestie">
             <i class="fa-solid fa-face-kiss-wink-heart"></i> Cạ Cứng
           </button>
           <button class="pill-btn" data-category="crush">
-            <i class="fa-solid fa-heart-pulse"></i> Crush Giảng Đường
+            <i class="fa-solid fa-heart-pulse"></i> Người Yêu / Crush
           </button>
         </nav>
 
@@ -102,14 +102,14 @@
 
           <div class="letter-inner">
             <div class="letter-to" id="display-to">
-              <span>Thân gửi:</span> <strong id="recipient-name">Các Bạn Nữ Lớp Mình</strong> 🌸
+              <span>Thân gửi:</span> <strong id="recipient-name">Các Bạn Nữ Tuyệt Vời</strong> 🌸
             </div>
             <p class="letter-text" id="wish-content">
-              Nhân ngày 20/10, chúc toàn thể các bạn nữ sinh viên lớp mình luôn ngập tràn niềm vui, xinh đẹp rạng rỡ, đồ án qua vèo vèo, săn học bổng mỏi tay và mãi là những đóa hoa tỏa sáng nhất giảng đường! 🎓✨
+              Nhân ngày 20/10, chúc bạn luôn ngập tràn niềm vui, nụ cười rạng rỡ, vạn sự như ý, luôn được yêu thương chiều chuộng và mãi là đóa hoa xinh đẹp nhất! 🌸💖
             </p>
             <div class="letter-from" id="display-from">
               <span>Từ:</span>
-              <strong id="sender-name">Hội Nam Sinh Lớp Mình 💖</strong>
+              <strong id="sender-name">Người gửi lời chúc 💖</strong>
             </div>
           </div>
         </div>
@@ -118,17 +118,17 @@
         <div class="quick-customize">
           <div class="input-cute-wrap">
             <i class="fa-solid fa-heart"></i>
-            <input type="text" id="name-recipient-input" placeholder="Gửi bạn: Lan Anh, Bạn cùng bàn, Nữ sinh khoa CNTT...">
+            <input type="text" id="name-recipient-input" placeholder="Gửi bạn: Lan Anh, Cô bạn thân, Người thương...">
           </div>
           <div class="input-cute-wrap">
             <i class="fa-solid fa-pen-fancy"></i>
-            <input type="text" id="name-sender-input" placeholder="Tên bạn gửi: Cạ cứng, Anh em bàn cuối...">
+            <input type="text" id="name-sender-input" placeholder="Tên bạn gửi: Cạ cứng, Bạn cùng bàn, Người thương...">
           </div>
         </div>
 
-        <!-- Hộp quà may mắn sinh viên 20/10 -->
+        <!-- Hộp quà may mắn 20/10 -->
         <div class="lucky-gift-banner">
-          <button id="lucky-gift-btn" class="lucky-gift-btn" type="button" title="Chạm để bốc quẻ may mắn 20/10!">
+          <button id="lucky-gift-btn" class="lucky-gift-btn" type="button" onclick="openGiftModal(event)" title="Chạm để bốc quẻ may mắn 20/10!">
             <div class="gift-box-anim">🎁</div>
             <div class="gift-text-wrap">
               <span class="gift-headline">Bốc Quẻ May Mắn 20/10 ✨</span>
@@ -159,87 +159,87 @@
       </footer>
     </main>
 
-    <!-- BỘ SƯU TẬP 6 ẢNH POLAROID KỶ NIỆM (DESKTOP: 2 CÁNH ÔM THIỆP • MOBILE: ALBUM VUỐT NGANG) -->
+    <!-- BỘ SƯU TẬP 6 CHÚ MÈO CUTE TẶNG HOA 20/10 (DESKTOP: 2 CÁNH ÔM THIỆP • MOBILE: ALBUM VUỐT NGANG) -->
     <div class="photo-wings-wrapper">
       <div class="mobile-photo-headline">
-        <i class="fa-solid fa-camera-retro"></i>
-        <span>Khoảnh Khắc Nữ Sinh Viên • Vuốt Ngang Xem 6 Ảnh 📸</span>
+        <i class="fa-solid fa-cat"></i>
+        <span>Biệt Đội Mèo Cute Tặng Hoa 🌸🐱 (Vuốt xem 6 chú mèo)</span>
       </div>
       <div class="photo-slider-track">
-        <!-- Cánh ảnh bên trái (Left Wing: Ảnh 1, 2, 3) -->
-        <aside class="photo-wing wing-left" aria-label="Ảnh kỷ niệm bên trái">
+        <!-- Cánh ảnh bên trái (Left Wing: Mèo 1, 2, 3) -->
+        <aside class="photo-wing wing-left" aria-label="Biệt đội mèo tặng hoa bên trái">
           <!-- Ảnh 1: Góc trên trái -->
-          <div class="cute-photo-card photo-card-1" data-title="Điểm A+ qua môn xuất sắc 💯">
+          <div class="cute-photo-card photo-card-1" data-title="Chú mèo ôm hoa tặng bạn nữ xinh đẹp 🌸🐱">
             <div class="washi-tape"></div>
             <div class="heart-sticker">💖</div>
             <div class="photo-img-frame">
-              <img src="Picture/Cat1.jpg" alt="Mèo chăm học điểm A+" loading="eager">
+              <img src="Picture/Cat1.jpg" alt="Mèo cute ôm hoa chúc mừng" loading="eager">
             </div>
             <div class="photo-tag">
-              <span>GPA 4.0 💯</span>
+              <span>Mèo Tặng Hoa 🌸</span>
             </div>
           </div>
 
           <!-- Ảnh 2: Cạnh giữa trái -->
-          <div class="cute-photo-card photo-card-2" data-title="Học bổng trong tầm tay 🎓">
+          <div class="cute-photo-card photo-card-2" data-title="Boss mèo mang hoa gửi ngàn lời chúc ngọt ngào ✨🐾">
             <div class="washi-tape"></div>
             <div class="heart-sticker">✨</div>
             <div class="photo-img-frame">
-              <img src="Picture/cat3.jpg" alt="Mèo săn học bổng" loading="eager">
+              <img src="Picture/cat3.jpg" alt="Boss mèo mang hoa ngọt ngào" loading="eager">
             </div>
             <div class="photo-tag">
-              <span>Săn Học Bổng 🎓</span>
+              <span>Mèo Ngọt Ngào ✨</span>
             </div>
           </div>
 
           <!-- Ảnh 3: Góc dưới trái -->
-          <div class="cute-photo-card photo-card-3" data-title="Xinh đẹp nhất giảng đường 🌸">
+          <div class="cute-photo-card photo-card-3" data-title="Hoàng thượng chúc bạn luôn xinh tươi như hoa 💖🐱">
             <div class="washi-tape"></div>
             <div class="heart-sticker">🌸</div>
             <div class="photo-img-frame">
-              <img src="Picture/cat5.jpg" alt="Mèo hoa khôi giảng đường" loading="eager">
+              <img src="Picture/cat5.jpg" alt="Mèo chúc bạn luôn xinh tươi" loading="eager">
             </div>
             <div class="photo-tag">
-              <span>Hoa Khôi Lớp 🌸</span>
+              <span>Mèo Dễ Thương 💖</span>
             </div>
           </div>
         </aside>
 
-        <!-- Cánh ảnh bên phải (Right Wing: Ảnh 4, 5, 6) -->
-        <aside class="photo-wing wing-right" aria-label="Ảnh kỷ niệm bên phải">
+        <!-- Cánh ảnh bên phải (Right Wing: Mèo 4, 5, 6) -->
+        <aside class="photo-wing wing-right" aria-label="Biệt đội mèo tặng hoa bên phải">
           <!-- Ảnh 4: Góc trên phải -->
-          <div class="cute-photo-card photo-card-4" data-title="Đáng yêu hết phần thiên hạ ✨">
+          <div class="cute-photo-card photo-card-4" data-title="Mèo ngoan mang bó hoa ngập tràn yêu thương 🎀🐾">
             <div class="washi-tape"></div>
             <div class="heart-sticker">🎀</div>
             <div class="photo-img-frame">
-              <img src="Picture/cat2.jpg" alt="Mèo đáng yêu siêu cấp" loading="eager">
+              <img src="Picture/cat2.jpg" alt="Mèo hoa yêu thương" loading="eager">
             </div>
             <div class="photo-tag">
-              <span>Đáng Yêu Số 1 ✨</span>
+              <span>Mèo Yêu Thương 🎀</span>
             </div>
           </div>
 
           <!-- Ảnh 5: Cạnh giữa phải -->
-          <div class="cute-photo-card photo-card-5" data-title="Bình tĩnh chiến thắng mọi deadline 🍀">
+          <div class="cute-photo-card photo-card-5" data-title="Mèo may mắn chúc bạn vạn sự như ý và luôn vui vẻ 🍀🐱">
             <div class="washi-tape"></div>
             <div class="heart-sticker">🍀</div>
             <div class="photo-img-frame">
-              <img src="Picture/cat4.jfif" alt="Mèo chiến thần chạy deadline" loading="eager">
+              <img src="Picture/cat4.jfif" alt="Mèo may mắn mang hoa" loading="eager">
             </div>
             <div class="photo-tag">
-              <span>Vượt Deadline 🍀</span>
+              <span>Mèo May Mắn 🍀</span>
             </div>
           </div>
 
           <!-- Ảnh 6: Góc dưới phải -->
-          <div class="cute-photo-card photo-card-6" data-title="Thanh xuân rực rỡ bên nhau ☀️">
+          <div class="cute-photo-card photo-card-6" data-title="Mèo hướng dương chúc ngày 20/10 rạng rỡ nụ cười ☀️🐾">
             <div class="washi-tape"></div>
             <div class="heart-sticker">☀️</div>
             <div class="photo-img-frame">
-              <img src="Picture/cat6.jfif" alt="Mèo thanh xuân tỏa sáng" loading="eager">
+              <img src="Picture/cat6.jfif" alt="Mèo hoa tươi rực rỡ" loading="eager">
             </div>
             <div class="photo-tag">
-              <span>Thanh Xuân ☀️</span>
+              <span>Mèo Tỏa Nắng ☀️</span>
             </div>
           </div>
         </aside>
@@ -259,21 +259,21 @@
 
   <!-- Modal Hộp Quà May Mắn 20/10 -->
   <div id="gift-modal" class="gift-modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-backdrop" id="gift-backdrop"></div>
+    <div class="modal-backdrop" id="gift-backdrop" onclick="closeGiftModal(event)"></div>
     <div class="gift-modal-card">
-      <button class="modal-close" id="gift-close" aria-label="Đóng">&times;</button>
+      <button class="modal-close" id="gift-close" type="button" onclick="closeGiftModal(event)" aria-label="Đóng">&times;</button>
       <div class="gift-crest-pill">🌸 QUẺ MAY MẮN 20/10 🌸</div>
       <div class="gift-box-hero">🎁</div>
-      <h3 class="gift-result-title" id="gift-result-title">Chiến Thần Học Tập 💯</h3>
+      <h3 class="gift-result-title" id="gift-result-title">Xinh Đẹp Rạng Ngời 👑</h3>
       <p class="gift-result-desc" id="gift-result-desc">
-        Chúc bạn kỳ này thi cử nhẹ tựa lông hồng, khoanh bừa trúng tủ, GPA chạm đỉnh 4.0 và ẵm trọn học bổng xuất sắc về tay! 🎓✨
+        Chúc bạn ngày 20/10 ngập tràn niềm vui, nụ cười rạng rỡ, vạn sự như ý, luôn được yêu thương chiều chuộng và mãi là đóa hoa xinh đẹp nhất! 🌸💖
       </p>
       <div class="gift-result-tags" id="gift-result-tags">
-        <span>💯 GPA 4.0</span>
-        <span>🎓 Săn Học Bổng</span>
-        <span>✨ Điểm A+</span>
+        <span>👑 Xinh Đẹp 1000%</span>
+        <span>🍀 Vạn Sự Hanh Thông</span>
+        <span>✨ Rạng Rỡ</span>
       </div>
-      <button id="gift-again-btn" class="action-btn btn-cute-pink gift-again-btn">
+      <button id="gift-again-btn" class="action-btn btn-cute-pink gift-again-btn" type="button" onclick="drawFortune()">
         <i class="fa-solid fa-wand-magic-sparkles"></i> Bốc Quẻ Khác ✨
       </button>
     </div>
