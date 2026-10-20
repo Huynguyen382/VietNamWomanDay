@@ -72,18 +72,11 @@ let trailParticles = [];
 let width = window.innerWidth;
 let height = window.innerHeight;
 
-// Nhận diện thiết bị di động / màn hình nhỏ để tối ưu hiệu năng 60fps mượt mà
-const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth <= 768);
-
 function resizeCanvas() {
   width = canvas.width = window.innerWidth;
   height = canvas.height = window.innerHeight;
 }
-let resizeTimer = null;
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(resizeCanvas, 120);
-});
+window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
 // Hạt trái tim bay lơ lửng (Cả rơi xuống và bay từ dưới lên)
@@ -96,9 +89,9 @@ class AmbientHeart {
     this.x = Math.random() * width;
     this.direction = Math.random() > 0.4 ? 'down' : 'up'; // Trái tim vừa rơi vừa bay lên
     this.y = initial ? Math.random() * height : (this.direction === 'down' ? -40 : height + 40);
-    this.size = Math.random() * 12 + (isMobileDevice ? 8 : 10);
-    this.speed = Math.random() * 1.1 + 0.4;
-    this.swing = Math.random() * 1.6 + 0.6;
+    this.size = Math.random() * 14 + 10;
+    this.speed = Math.random() * 1.2 + 0.5;
+    this.swing = Math.random() * 1.8 + 0.8;
     this.swingAngle = Math.random() * Math.PI * 2;
     this.swingSpeed = Math.random() * 0.02 + 0.01;
     this.rotation = (Math.random() - 0.5) * 40;
@@ -108,10 +101,10 @@ class AmbientHeart {
 
     // Gam màu trái tim phong phú ngọt ngào
     const heartColors = [
-      'rgba(255, 51, 119, 0.75)',  // Hồng đậm rực rỡ
-      'rgba(255, 105, 180, 0.8)',  // Hồng phấn
-      'rgba(255, 182, 193, 0.82)', // Hồng pastel
-      'rgba(224, 17, 95, 0.72)',   // Ruby red
+      'rgba(255, 51, 119, 0.78)',  // Hồng đậm rực rỡ
+      'rgba(255, 105, 180, 0.82)', // Hồng phấn
+      'rgba(255, 182, 193, 0.85)', // Hồng pastel
+      'rgba(224, 17, 95, 0.75)',   // Ruby red
       'rgba(255, 255, 255, 0.88)'  // Trắng tinh khôi phát sáng
     ];
     this.color = heartColors[Math.floor(Math.random() * heartColors.length)];
@@ -133,15 +126,12 @@ class AmbientHeart {
   }
 
   draw() {
-    // Tối ưu: Bỏ qua không vẽ các hạt nằm ngoài tầm nhìn màn hình
-    if (this.y < -40 || this.y > height + 40 || this.x < -40 || this.x > width + 40) return;
-
     ctx.save();
     ctx.translate(this.x, this.y);
     ctx.rotate((this.rotation * Math.PI) / 180);
     
     // Hiệu ứng nhịp đập nhẹ
-    const pulseScale = 1 + Math.sin(this.pulse) * 0.1;
+    const pulseScale = 1 + Math.sin(this.pulse) * 0.12;
     ctx.scale(pulseScale, pulseScale);
 
     ctx.fillStyle = this.color;
@@ -232,34 +222,24 @@ class BurstParticle {
   }
 }
 
-// Khởi tạo các trái tim bay (Tối ưu số lượng trên điện thoại để đạt 60fps mượt mà)
-const HEART_COUNT = isMobileDevice ? 16 : 42;
+// Khởi tạo các trái tim bay
+const HEART_COUNT = Math.min(width < 600 ? 30 : 60, 65);
 for (let i = 0; i < HEART_COUNT; i++) {
   hearts.push(new AmbientHeart());
 }
 
-function spawnBurst(x, y, count = 20) {
-  const maxSpawn = isMobileDevice ? 12 : 22;
-  const actualCount = Math.min(count, maxSpawn);
-  
-  // Tránh dồn ứ quá nhiều hạt pháo hoa trên màn hình
-  if (burstParticles.length > 36) {
-    burstParticles.splice(0, burstParticles.length - 24);
-  }
-  for (let i = 0; i < actualCount; i++) {
+function spawnBurst(x, y, count = 24) {
+  for (let i = 0; i < count; i++) {
     burstParticles.push(new BurstParticle(x, y));
   }
 }
 
-// Theo dõi con trỏ chuột tạo vệt trái tim ngọt ngào (Chỉ kích hoạt trên Desktop bằng chuột)
+// Theo dõi con trỏ chuột tạo vệt trái tim ngọt ngào
 let lastMouseSpawn = 0;
 window.addEventListener('pointermove', (e) => {
-  if (e.pointerType === 'touch' || isMobileDevice) return; // Bỏ qua trên màn hình cảm ứng để cuộn trang siêu mượt
   const now = Date.now();
-  if (now - lastMouseSpawn > 70) {
-    if (trailParticles.length < 24) {
-      trailParticles.push(new CursorHeart(e.clientX, e.clientY));
-    }
+  if (now - lastMouseSpawn > 60) {
+    trailParticles.push(new CursorHeart(e.clientX, e.clientY));
     lastMouseSpawn = now;
   }
 });
@@ -274,7 +254,7 @@ function animateCanvas() {
     hearts[i].draw();
   }
 
-  // Vẽ vệt tim theo chuột (Chỉ khi có hạt)
+  // Vẽ vệt tim theo chuột
   for (let i = trailParticles.length - 1; i >= 0; i--) {
     trailParticles[i].update();
     trailParticles[i].draw();
@@ -296,10 +276,10 @@ function animateCanvas() {
 }
 requestAnimationFrame(animateCanvas);
 
-// Click màn hình tung pháo hoa tim (Không chặn tương tác input/nút)
+// Click màn hình tung pháo hoa tim
 window.addEventListener('pointerdown', (e) => {
-  if (['INPUT', 'BUTTON', 'A', 'TEXTAREA'].includes(e.target.tagName) || e.target.closest('button, input, .cute-photo-card')) return;
-  spawnBurst(e.clientX, e.clientY, isMobileDevice ? 10 : 16);
+  if (['INPUT', 'BUTTON', 'A'].includes(e.target.tagName)) return;
+  spawnBurst(e.clientX, e.clientY, 16);
   playChimeTone(587.33 + Math.random() * 200, 0.2);
 });
 
@@ -528,7 +508,100 @@ window.addEventListener('keydown', (e) => {
 });
 
 // ==========================================================================
-// 8. THÔNG BÁO TOAST
+// 8. HỘP QUÀ MAY MẮN 20/10 (BỐC QUẺ VUI DÀNH CHO NỮ SINH VIÊN)
+// ==========================================================================
+const STUDENT_FORTUNES = [
+  {
+    title: "Chiến Thần Học Tập 💯",
+    desc: "Chúc bạn kỳ này thi cử nhẹ tựa lông hồng, khoanh bừa trúng tủ, GPA chạm đỉnh 4.0 và ẵm trọn học bổng xuất sắc về tay! 🎓✨",
+    tags: ["💯 GPA 4.0", "🎓 Săn Học Bổng", "✨ Điểm A+"]
+  },
+  {
+    title: "Hoa Khôi Giảng Đường 👑",
+    desc: "Nhan sắc thăng hạng vượt bậc, nụ cười tỏa nắng làm bừng sáng cả hội trường. Crush chủ động inbox rủ đi trà sữa và bao ăn trưa mỗi ngày! 💖🌸",
+    tags: ["👑 Xinh Đẹp 1000%", "💖 Crush Tỏ Tình", "🌸 Rạng Rỡ"]
+  },
+  {
+    title: "Khắc Tinh Của Deadline 💻",
+    desc: "Deadline tự động lùi xa, bài tập nhóm toàn đồng đội gánh team đỉnh cao, slide thuyết trình siêu mượt, thầy cô gật đầu khen nức nở! 🍀✨",
+    tags: ["🍀 Né Deadline", "💻 Team Đỉnh Cao", "✨ Điểm A+"]
+  },
+  {
+    title: "Tiểu Thư Bình Yên ☀️",
+    desc: "Sáng thức dậy đúng giờ, đi học không kẹt xe, canteen còn món yêu thích, ví tiền lúc nào cũng rủng rỉnh và tâm trạng luôn vui phơi phới! 🎀💐",
+    tags: ["☀️ Tươi Vui", "🎀 Ví Luôn Đầy", "💐 Hạnh Phúc"]
+  },
+  {
+    title: "Nữ Thần May Mắn 🍀",
+    desc: "Điểm danh không bao giờ trúng lúc vắng, bốc thăm trúng quà to, kiểm tra 15 phút đúng ngay câu vừa đọc lướt, vạn sự hanh thông! 🌟🎉",
+    tags: ["🍀 Siêu May Mắn", "🌟 Trúng Tủ", "🎉 Vui Vẻ"]
+  },
+  {
+    title: "Cạ Cứng Quốc Dân 👭",
+    desc: "Có hội bạn thân luôn kề vai sát cánh, cùng nhau vượt qua mọi mùa thi cử, chụp ảnh sống ảo triệu like và lưu giữ thanh xuân rực rỡ nhất! 📸❤️",
+    tags: ["👭 Tình Bạn Diệu Kỳ", "📸 Ảnh Đẹp", "❤️ Thanh Xuân"]
+  }
+];
+
+const luckyGiftBtn = document.getElementById('lucky-gift-btn');
+const giftModal = document.getElementById('gift-modal');
+const giftBackdrop = document.getElementById('gift-backdrop');
+const giftClose = document.getElementById('gift-close');
+const giftAgainBtn = document.getElementById('gift-again-btn');
+const giftResultTitle = document.getElementById('gift-result-title');
+const giftResultDesc = document.getElementById('gift-result-desc');
+const giftResultTags = document.getElementById('gift-result-tags');
+
+let lastFortuneIndex = -1;
+
+function drawFortune() {
+  let rand;
+  do {
+    rand = Math.floor(Math.random() * STUDENT_FORTUNES.length);
+  } while (rand === lastFortuneIndex && STUDENT_FORTUNES.length > 1);
+  lastFortuneIndex = rand;
+  const f = STUDENT_FORTUNES[rand];
+
+  giftResultTitle.textContent = f.title;
+  giftResultDesc.textContent = f.desc;
+  giftResultTags.innerHTML = f.tags.map(t => `<span>${t}</span>`).join('');
+
+  // Tung pháo hoa tim chúc mừng
+  spawnBurst(window.innerWidth / 2, window.innerHeight * 0.45, isMobileDevice ? 14 : 26);
+  playChimeTone(880, 0.35);
+}
+
+if (luckyGiftBtn) {
+  luckyGiftBtn.addEventListener('click', () => {
+    drawFortune();
+    giftModal.classList.add('show');
+    giftModal.setAttribute('aria-hidden', 'false');
+  });
+}
+
+if (giftAgainBtn) {
+  giftAgainBtn.addEventListener('click', () => {
+    drawFortune();
+  });
+}
+
+function closeGiftModal() {
+  if (giftModal) {
+    giftModal.classList.remove('show');
+    giftModal.setAttribute('aria-hidden', 'true');
+  }
+}
+
+if (giftClose) giftClose.addEventListener('click', closeGiftModal);
+if (giftBackdrop) giftBackdrop.addEventListener('click', closeGiftModal);
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && giftModal && giftModal.classList.contains('show')) {
+    closeGiftModal();
+  }
+});
+
+// ==========================================================================
+// 9. THÔNG BÁO TOAST
 // ==========================================================================
 let toastTimer = null;
 function showToast(msg) {
@@ -542,7 +615,7 @@ function showToast(msg) {
 }
 
 // ==========================================================================
-// 9. KHỞI CHẠY (INIT)
+// 10. KHỞI CHẠY (INIT)
 // ==========================================================================
 document.addEventListener('DOMContentLoaded', () => {
   updateWishDisplay();
