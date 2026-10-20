@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 🌸</title>
+  <title>Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 🌸💖</title>
   
-  <!-- SEO & Social Meta Tags -->
-  <meta name="description" content="Trang web thiệp chúc mừng Ngày Phụ nữ Việt Nam 20/10 với hiệu ứng lung linh, sinh động và tràn đầy yêu thương.">
-  <meta property="og:title" content="Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 💐">
-  <meta property="og:description" content="Gửi trọn yêu thương, ngàn lời chúc tốt đẹp nhất tới những người phụ nữ tuyệt vời!">
-  <meta property="og:type" content="website">
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Trang web chúc mừng Ngày Phụ nữ Việt Nam 20/10 giao diện hồng ngọt ngào, đáng yêu, hiệu ứng sinh động không cần cuộn trang.">
+  <meta property="og:title" content="Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 🌸">
+  <meta property="og:description" content="Gửi trọn yêu thương và ngàn lời chúc ngọt ngào nhất tới người phụ nữ tuyệt vời!">
   
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Đáng yêu, mềm mại, thanh lịch -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Dancing+Script:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -23,283 +22,194 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Canvas nền hiệu ứng cánh hoa bay & lấp lánh -->
+  <!-- Canvas nền hiệu ứng cánh hoa bay & tim lấp lánh -->
   <canvas id="ambient-canvas"></canvas>
 
-  <!-- Nút điều khiển âm thanh & hiệu ứng -->
-  <div class="floating-controls">
-    <button id="music-btn" class="ctrl-btn" title="Bật/Tắt nhạc nền" aria-label="Bật/Tắt nhạc nền">
+  <!-- Nút điều khiển âm thanh & bắn tim góc trên -->
+  <div class="top-nav-controls">
+    <button id="music-btn" class="cute-ctrl-btn" title="Bật/Tắt nhạc nền dễ thương" aria-label="Bật/Tắt nhạc">
       <i class="fa-solid fa-music"></i>
-      <span class="music-wave">
+      <div class="music-wave">
         <span></span><span></span><span></span>
-      </span>
+      </div>
     </button>
-    <button id="burst-btn" class="ctrl-btn" title="Bắn pháo hoa tim" aria-label="Bắn hoa tim">
+    <button id="burst-btn" class="cute-ctrl-btn" title="Bắn mưa tim & hoa" aria-label="Bắn mưa tim">
       <i class="fa-solid fa-wand-magic-sparkles"></i>
     </button>
   </div>
 
-  <main class="container">
-    <!-- Header Banner -->
-    <header class="header-section">
-      <div class="tagline-badge">
-        <i class="fa-solid fa-sparkles"></i> 20 Tháng 10 • Ngày Phụ Nữ Việt Nam <i class="fa-solid fa-sparkles"></i>
+  <!-- =================================================================
+       6 ẢNH XUNG QUANH MÀN HÌNH (DECORATIVE SURROUNDING PHOTOS)
+       ================================================================= -->
+  <aside class="surrounding-photos-wrapper" aria-label="Bộ sưu tập ảnh dễ thương">
+    <!-- Góc trên bên trái -->
+    <div class="cute-photo-card photo-top-left" data-title="Xinh đẹp rạng rỡ">
+      <div class="washi-tape"></div>
+      <div class="photo-img-frame">
+        <img src="Picture/Cat1.jpg" alt="Mèo con xinh đẹp" loading="eager">
       </div>
-      <h1 class="main-title">
-        Chúc Mừng <span class="highlight-text">Phụ Nữ Việt Nam</span>
+      <div class="photo-tag">
+        <span>Xinh Đẹp 🌸</span>
+      </div>
+    </div>
+
+    <!-- Góc trên bên phải -->
+    <div class="cute-photo-card photo-top-right" data-title="Đáng yêu số 1">
+      <div class="washi-tape"></div>
+      <div class="photo-img-frame">
+        <img src="Picture/cat2.jpg" alt="Mèo con đáng yêu" loading="eager">
+      </div>
+      <div class="photo-tag">
+        <span>Đáng Yêu ✨</span>
+      </div>
+    </div>
+
+    <!-- Cạnh giữa bên trái -->
+    <div class="cute-photo-card photo-mid-left" data-title="Ngập tràn niềm vui">
+      <div class="washi-tape"></div>
+      <div class="photo-img-frame">
+        <img src="Picture/cat3.jpg" alt="Mèo con vui vẻ" loading="eager">
+      </div>
+      <div class="photo-tag">
+        <span>Hạnh Phúc 💖</span>
+      </div>
+    </div>
+
+    <!-- Cạnh giữa bên phải -->
+    <div class="cute-photo-card photo-mid-right" data-title="Bình an ngọt ngào">
+      <div class="washi-tape"></div>
+      <div class="photo-img-frame">
+        <img src="Picture/cat4.jfif" alt="Mèo con ngoan ngoãn" loading="eager">
+      </div>
+      <div class="photo-tag">
+        <span>Bình Yên 🍀</span>
+      </div>
+    </div>
+
+    <!-- Góc dưới bên trái -->
+    <div class="cute-photo-card photo-bottom-left" data-title="Cưng như công chúa">
+      <div class="washi-tape"></div>
+      <div class="photo-img-frame">
+        <img src="Picture/cat5.jpg" alt="Mèo con đáng yêu 5" loading="eager">
+      </div>
+      <div class="photo-tag">
+        <span>Công Chúa 👑</span>
+      </div>
+    </div>
+
+    <!-- Góc dưới bên phải -->
+    <div class="cute-photo-card photo-bottom-right" data-title="Tỏa sáng rạng ngời">
+      <div class="washi-tape"></div>
+      <div class="photo-img-frame">
+        <img src="Picture/cat6.jfif" alt="Mèo con đáng yêu 6" loading="eager">
+      </div>
+      <div class="photo-tag">
+        <span>Rạng Ngời ☀️</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- =================================================================
+       KHU VỰC TRUNG TÂM (CHÍNH GIỮA MÀN HÌNH - KHÔNG CẦN SCROLL)
+       ================================================================= -->
+  <main class="center-stage">
+    <!-- Header xinh xắn -->
+    <header class="stage-header">
+      <div class="badge-2010">
+        <i class="fa-solid fa-heart"></i> 20 Tháng 10 • Ngày Phụ Nữ Việt Nam <i class="fa-solid fa-heart"></i>
+      </div>
+      <h1 class="stage-title">
+        Chúc Mừng <span class="sparkle-pink">Phụ Nữ Việt Nam</span>
       </h1>
-      <p class="subtitle">
-        "Gửi ngàn đóa hoa và triệu lời chúc yêu thương đến những người phụ nữ tuyệt vời nhất thế giới!"
+      <p class="stage-sub">
+        Gửi ngàn đóa hoa và triệu tình yêu thương tới những người phụ nữ tuyệt vời! 💐
       </p>
     </header>
 
-    <!-- Thư & Thiệp chúc mừng tương tác 3D -->
-    <section class="card-section">
-      <div class="envelope-wrapper" id="envelope-wrapper">
-        <div class="envelope" id="envelope">
-          <div class="envelope-back"></div>
-          <div class="letter" id="letter">
-            <div class="letter-stamp">
-              <i class="fa-solid fa-heart"></i> 20/10
-            </div>
-            <div class="letter-content">
-              <h3 class="letter-greeting" id="letter-greeting">Gửi Người Phụ Nữ Tuyệt Vời,</h3>
-              <p class="letter-body" id="letter-body">
-                Nhân ngày 20/10, chúc bạn luôn ngập tràn niềm vui, nụ cười rạng rỡ như ánh bình minh, xinh đẹp như những đóa hồng ban mai và luôn được yêu thương, trân trọng mỗi ngày!
-              </p>
-              <div class="letter-signature">
-                <span>Với tất cả sự trân quý ❤️</span>
-                <strong id="letter-from">Từ Người Yêu Quý Bạn</strong>
-              </div>
-            </div>
-          </div>
-          <div class="envelope-front"></div>
-          <div class="envelope-flap" id="envelope-flap">
-            <div class="wax-seal" id="wax-seal" title="Bấm để mở thiệp">
-              <span>20/10</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <p class="envelope-hint">
-        <i class="fa-solid fa-hand-pointer"></i> <span id="envelope-action-text">Chạm vào phong thư để mở thiệp chúc mừng</span>
-      </p>
-    </section>
-
-    <!-- Bộ sưu tập lời chúc theo chủ đề -->
-    <section class="wishes-section">
-      <div class="section-title-wrap">
-        <span class="sub-heading">Gửi Trao Yêu Thương</span>
-        <h2 class="section-title">Chọn Lời Chúc Ý Nghĩa</h2>
-      </div>
-
-      <!-- Tab danh mục -->
-      <div class="wish-tabs" role="tablist">
-        <button class="wish-tab active" data-category="mom">
-          <i class="fa-solid fa-heart"></i> Dành Cho Mẹ
+    <!-- Thẻ thiệp chúc mừng trung tâm (Interactive Card) -->
+    <section class="magic-card">
+      <!-- Tabs chọn chủ đề lời chúc -->
+      <nav class="category-pills" role="tablist">
+        <button class="pill-btn active" data-category="mom">
+          <i class="fa-solid fa-heart"></i> Mẹ Yêu
         </button>
-        <button class="wish-tab" data-category="lover">
-          <i class="fa-solid fa-gem"></i> Dành Cho Người Yêu
+        <button class="pill-btn" data-category="lover">
+          <i class="fa-solid fa-gem"></i> Người Yêu
         </button>
-        <button class="wish-tab" data-category="sister">
-          <i class="fa-solid fa-sun"></i> Dành Cho Chị / Em Gái
+        <button class="pill-btn" data-category="sister">
+          <i class="fa-solid fa-sun"></i> Chị / Em
         </button>
-        <button class="wish-tab" data-category="colleague">
-          <i class="fa-solid fa-champagne-glasses"></i> Bạn Bè & Đồng Nghiệp
+        <button class="pill-btn" data-category="colleague">
+          <i class="fa-solid fa-champagne-glasses"></i> Bạn Bè
+        </button>
+      </nav>
+
+      <!-- Nội dung bức thư -->
+      <div class="letter-box" id="letter-box">
+        <div class="letter-decor-heart">💖</div>
+        <div class="letter-inner">
+          <div class="letter-to" id="display-to">
+            <span>Thân gửi:</span> <strong id="recipient-name">Người Phụ Nữ Tuyệt Vời</strong>
+          </div>
+          <p class="letter-text" id="wish-content">
+            Nhân ngày 20/10, chúc bạn luôn ngập tràn niềm vui, nụ cười rạng rỡ như ánh bình minh, xinh đẹp như những đóa hồng ban mai và luôn được yêu thương mỗi ngày! 🌸
+          </p>
+          <div class="letter-from" id="display-from">
+            <span>Thương mến,</span>
+            <strong id="sender-name">Người Yêu Quý Bạn ❤️</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tùy chỉnh người nhận / người gửi siêu nhanh -->
+      <div class="quick-customize">
+        <div class="input-cute-wrap">
+          <i class="fa-solid fa-user-heart"></i>
+          <input type="text" id="name-recipient-input" placeholder="Tên người nhận (ví dụ: Mẹ yêu, Lan Anh...)">
+        </div>
+        <div class="input-cute-wrap">
+          <i class="fa-solid fa-signature"></i>
+          <input type="text" id="name-sender-input" placeholder="Tên bạn gửi...">
+        </div>
+      </div>
+
+      <!-- Các nút thao tác chính -->
+      <div class="card-action-bar">
+        <button id="next-wish-btn" class="action-btn btn-cute-outline" title="Đổi lời chúc khác">
+          <i class="fa-solid fa-rotate"></i> Đổi lời chúc
+        </button>
+        <button id="copy-wish-btn" class="action-btn btn-cute-pink" title="Sao chép lời chúc">
+          <i class="fa-regular fa-copy"></i> Sao chép lời chúc
+        </button>
+        <button id="share-link-btn" class="action-btn btn-cute-gold" title="Sao chép liên kết có tên">
+          <i class="fa-solid fa-share-nodes"></i> Gửi tặng link này
         </button>
       </div>
-
-      <!-- Nội dung lời chúc -->
-      <div class="wish-display-card">
-        <div class="wish-quote-icon">
-          <i class="fa-solid fa-quote-left"></i>
-        </div>
-        <p class="wish-text" id="wish-text">
-          Đang tải lời chúc...
-        </p>
-        <div class="wish-actions">
-          <button id="copy-wish-btn" class="btn btn-secondary">
-            <i class="fa-regular fa-copy"></i> Sao chép lời chúc
-          </button>
-          <button id="apply-to-card-btn" class="btn btn-primary">
-            <i class="fa-solid fa-envelope-open-text"></i> Đưa vào phong thư
-          </button>
-          <button id="next-wish-btn" class="btn btn-outline" title="Đổi lời chúc khác">
-            <i class="fa-solid fa-rotate"></i> Lời chúc khác
-          </button>
-        </div>
-      </div>
     </section>
 
-    <!-- Cá nhân hóa lời chúc & Tạo link gửi tặng -->
-    <section class="customize-section">
-      <div class="customize-card">
-        <div class="customize-header">
-          <i class="fa-solid fa-wand-magic"></i>
-          <h3>Tạo Thiệp Riêng Gửi Tặng</h3>
-        </div>
-        <p class="customize-desc">
-          Nhập tên người bạn muốn chúc và tên của bạn để tạo đường link thiệp gửi tặng riêng qua Zalo, Messenger, Facebook!
-        </p>
-
-        <form id="custom-form" class="custom-form" onsubmit="return false;">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="input-recipient">Người nhận (Tên / Danh xưng):</label>
-              <div class="input-with-icon">
-                <i class="fa-regular fa-user"></i>
-                <input type="text" id="input-recipient" placeholder="Ví dụ: Mẹ yêu, Lan Anh, Em yêu...">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="input-sender">Người gửi (Tên của bạn):</label>
-              <div class="input-with-icon">
-                <i class="fa-solid fa-signature"></i>
-                <input type="text" id="input-sender" placeholder="Ví dụ: Con trai, Anh, Người thầm thương...">
-              </div>
-            </div>
-          </div>
-
-          <div class="form-actions">
-            <button type="button" id="create-card-btn" class="btn btn-primary">
-              <i class="fa-solid fa-check"></i> Cập nhật thiệp ngay
-            </button>
-            <button type="button" id="share-link-btn" class="btn btn-accent">
-              <i class="fa-solid fa-share-nodes"></i> Sao chép link tặng bạn bè
-            </button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-    <!-- 3 Điểm Tôn Vinh & Bông hoa nở sinh động -->
-    <section class="bloom-showcase">
-      <div class="flower-container" id="flower-interactive" title="Chạm để làm hoa nở và bắn hạt sáng!">
-        <div class="flower-aura"></div>
-        <div class="rose-flower">
-          <div class="petal petal-1"></div>
-          <div class="petal petal-2"></div>
-          <div class="petal petal-3"></div>
-          <div class="petal petal-4"></div>
-          <div class="petal petal-5"></div>
-          <div class="rose-center">❤️</div>
-        </div>
-        <span class="bloom-text">Chạm vào bông hoa tình yêu ✨</span>
-      </div>
-
-      <div class="virtues-grid">
-        <div class="virtue-card">
-          <div class="virtue-icon">🌸</div>
-          <h3>Xinh Đẹp & Dịu Dàng</h3>
-          <p>Luôn giữ nét đằm thắm, nụ cười tươi tắn xua tan mọi mỏi mệt trong cuộc sống.</p>
-        </div>
-        <div class="virtue-card">
-          <div class="virtue-icon">💎</div>
-          <h3>Bản Lĩnh & Tự Tin</h3>
-          <p>Tự tin chinh phục những mục tiêu, tỏa sáng bằng tài năng và đam mê riêng.</p>
-        </div>
-        <div class="virtue-card">
-          <div class="virtue-icon">☀️</div>
-          <h3>Hạnh Phúc & Bình An</h3>
-          <p>Mỗi ngày trôi qua đều là những khoảnh khắc trọn vẹn, ấm áp bên người yêu thương.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Góc Lan Tỏa Niềm Vui & Dễ Thương (Photo Gallery) -->
-    <section class="gallery-section">
-      <div class="section-title-wrap">
-        <span class="sub-heading">Vitamin Ngọt Ngào</span>
-        <h2 class="section-title">Góc Nụ Cười & Dễ Thương</h2>
-      </div>
-      <p class="gallery-desc">
-        Gửi tặng những khoảnh khắc đáng yêu siêu cấp giúp xua tan mọi mệt mỏi!
-      </p>
-
-      <div class="polaroid-grid">
-        <div class="polaroid-card">
-          <div class="polaroid-img-wrap">
-            <img src="Picture/Cat1.jpg" alt="Mèo con đáng yêu 1" loading="lazy">
-          </div>
-          <div class="polaroid-caption">
-            <span>Luôn tươi cười rạng rỡ nha! ✨</span>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-
-        <div class="polaroid-card">
-          <div class="polaroid-img-wrap">
-            <img src="Picture/cat2.jpg" alt="Mèo con đáng yêu 2" loading="lazy">
-          </div>
-          <div class="polaroid-caption">
-            <span>Xinh xắn, đáng yêu số một 🌸</span>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-
-        <div class="polaroid-card">
-          <div class="polaroid-img-wrap">
-            <img src="Picture/cat3.jpg" alt="Mèo con đáng yêu 3" loading="lazy">
-          </div>
-          <div class="polaroid-caption">
-            <span>Ngập tràn yêu thương mỗi ngày 💖</span>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-
-        <div class="polaroid-card">
-          <div class="polaroid-img-wrap">
-            <img src="Picture/cat4.jfif" alt="Mèo con đáng yêu 4" loading="lazy">
-          </div>
-          <div class="polaroid-caption">
-            <span>Bình an và hạnh phúc đong đầy 🍀</span>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-
-        <div class="polaroid-card">
-          <div class="polaroid-img-wrap">
-            <img src="Picture/cat5.jpg" alt="Mèo con đáng yêu 5" loading="lazy">
-          </div>
-          <div class="polaroid-caption">
-            <span>Được cưng chiều như công chúa 👑</span>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-
-        <div class="polaroid-card">
-          <div class="polaroid-img-wrap">
-            <img src="Picture/cat6.jfif" alt="Mèo con đáng yêu 6" loading="lazy">
-          </div>
-          <div class="polaroid-caption">
-            <span>Tỏa sáng theo cách của bạn ☀️</span>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-hearts">
-        <span>💐</span><span>🌸</span><span>💖</span><span>🌺</span><span>✨</span>
-      </div>
-      <p class="footer-quote">
-        "Phụ nữ là để yêu thương, trân trọng và nâng niu mỗi ngày, không chỉ riêng 20/10."
-      </p>
-      <p class="footer-copy">
-        Made with ❤️ for Vietnamese Women's Day • 20/10
-      </p>
+    <!-- Mini Footer -->
+    <footer class="stage-footer">
+      <span>🌸 Luôn xinh đẹp, tự tin & ngập tràn hạnh phúc mỗi ngày! 🌸</span>
     </footer>
   </main>
 
-  <!-- Thông báo Toast -->
-  <div id="toast" class="toast" role="alert" aria-live="assertive">
-    <i class="fa-solid fa-circle-check"></i>
-    <span id="toast-message">Đã sao chép vào bộ nhớ tạm!</span>
+  <!-- Modal phóng to ảnh khi click -->
+  <div id="photo-modal" class="photo-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Đóng">&times;</button>
+      <img id="modal-img" src="" alt="Xem ảnh phóng to">
+      <p id="modal-caption" class="modal-caption"></p>
+    </div>
   </div>
 
+  <!-- Thông báo Toast ngọt ngào -->
+  <div id="toast" class="cute-toast" role="alert" aria-live="polite">
+    <i class="fa-solid fa-heart"></i>
+    <span id="toast-message">Đã sao chép lời chúc thành công!</span>
+  </div>
+
+  <!-- Script xử lý -->
   <script src="script.js"></script>
 </body>
 </html>

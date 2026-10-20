@@ -1,49 +1,59 @@
 /* ==========================================================================
-   CHÚC MỪNG NGÀY PHỤ NỮ VIỆT NAM 20/10 - STYLESHEET
+   CHÚC MỪNG NGÀY PHỤ NỮ VIỆT NAM 20/10 - GIAO DIỆN HỒNG NGỌT NGÀO & ĐÁNG YÊU
+   THIẾT KẾ GÓI GỌN 1 MÀN HÌNH (NO SCROLL) - ẢNH BAO QUANH
    ========================================================================== */
 
 :root {
-  --primary-color: #ff3366;
-  --primary-dark: #d61c4e;
-  --primary-light: #ff7597;
-  --rose-gold: #e28892;
-  --gold-accent: #f5b041;
-  --bg-gradient: linear-gradient(135deg, #1b0518 0%, #2f0b29 35%, #420f38 70%, #1a0624 100%);
-  --card-bg: rgba(255, 255, 255, 0.08);
-  --card-border: rgba(255, 182, 193, 0.25);
-  --card-glow: rgba(255, 51, 102, 0.25);
-  --text-primary: #ffffff;
-  --text-secondary: #ffd6e0;
-  --text-muted: #d4a5b8;
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
-  --shadow-glow: 0 0 25px rgba(255, 51, 102, 0.4);
-  --font-heading: 'Dancing Script', cursive;
-  --font-title: 'Playfair Display', serif;
-  --font-body: 'Quicksand', sans-serif;
-  --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* Bảng màu hồng tươi sáng, đáng yêu & ấm áp */
+  --bg-top: #fff5f8;
+  --bg-mid: #ffdbe7;
+  --bg-bottom: #ffc2d7;
+  --pink-primary: #ff4081;
+  --pink-deep: #e91e63;
+  --pink-soft: #ff80ab;
+  --pink-cream: #fff9fb;
+  --yellow-warm: #ffd166;
+  --yellow-accent: #ffb703;
+  --text-main: #5c203b;
+  --text-muted: #8c4c6a;
+  --text-bright: #d81b60;
+  
+  /* Hiệu ứng bóng đổ mềm mại, bồng bềnh */
+  --shadow-cute: 0 10px 25px rgba(255, 64, 129, 0.22);
+  --shadow-hover: 0 16px 35px rgba(255, 64, 129, 0.35);
+  --shadow-inset: inset 0 2px 4px rgba(255, 255, 255, 0.8);
+  
+  /* Fonts chữ đáng yêu & mềm mại */
+  --font-cute: 'Comfortaa', cursive;
+  --font-hand: 'Dancing Script', cursive;
+  --font-main: 'Nunito', sans-serif;
+  
+  --transition-bouncy: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-smooth: all 0.3s ease;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-body);
-  background: var(--bg-gradient);
-  color: var(--text-primary);
-  min-height: 100vh;
+html, body {
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden; /* Tuyệt đối không cần cuộn trang */
+  font-family: var(--font-main);
+  background: linear-gradient(135deg, var(--bg-top) 0%, var(--bg-mid) 50%, var(--bg-bottom) 100%);
+  color: var(--text-main);
   position: relative;
-  overflow-x: hidden;
-  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Canvas hiệu ứng hạt nền */
+/* Canvas hiệu ứng nền cánh hoa & tim lấp lánh */
 #ambient-canvas {
   position: fixed;
   top: 0;
@@ -54,60 +64,62 @@ body {
   z-index: 1;
 }
 
-/* Nút điều khiển nổi góc màn hình */
-.floating-controls {
+/* ==========================================================================
+   NÚT ĐIỀU KHIỂN NỔI GÓC TRÊN
+   ========================================================================== */
+.top-nav-controls {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 18px;
   display: flex;
-  gap: 12px;
-  z-index: 999;
+  gap: 10px;
+  z-index: 100;
 }
 
-.ctrl-btn {
-  width: 48px;
-  height: 48px;
+.cute-ctrl-btn {
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  color: #fff;
-  font-size: 1.2rem;
+  border: 2px solid #fff;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  color: var(--pink-deep);
+  font-size: 1.15rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(255, 64, 129, 0.25);
+  transition: var(--transition-bouncy);
   position: relative;
 }
 
-.ctrl-btn:hover {
-  transform: translateY(-3px) scale(1.08);
-  background: rgba(255, 51, 102, 0.8);
-  box-shadow: 0 6px 20px rgba(255, 51, 102, 0.6);
-  border-color: rgba(255, 255, 255, 0.6);
+.cute-ctrl-btn:hover {
+  transform: scale(1.15) rotate(5deg);
+  background: var(--pink-primary);
+  color: #fff;
+  box-shadow: var(--shadow-cute);
 }
 
-.ctrl-btn.active {
-  background: linear-gradient(135deg, #ff3366, #ff7597);
-  box-shadow: 0 0 15px rgba(255, 51, 102, 0.8);
+.cute-ctrl-btn.active {
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-deep));
+  color: #fff;
+  box-shadow: 0 0 15px rgba(255, 64, 129, 0.6);
 }
 
 /* Sóng nhạc mini */
 .music-wave {
   position: absolute;
-  bottom: 6px;
+  bottom: 4px;
   display: flex;
   align-items: flex-end;
   gap: 2px;
-  height: 8px;
+  height: 7px;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.ctrl-btn.active .music-wave {
+.cute-ctrl-btn.active .music-wave {
   opacity: 1;
 }
 
@@ -115,898 +127,673 @@ body {
   width: 2px;
   background-color: #fff;
   border-radius: 2px;
-  animation: wave 1s infinite ease-in-out;
+  animation: wavePulse 0.9s infinite ease-in-out;
 }
 
-.music-wave span:nth-child(1) { height: 4px; animation-delay: 0.1s; }
-.music-wave span:nth-child(2) { height: 8px; animation-delay: 0.3s; }
-.music-wave span:nth-child(3) { height: 5px; animation-delay: 0.2s; }
+.music-wave span:nth-child(1) { height: 3px; animation-delay: 0.1s; }
+.music-wave span:nth-child(2) { height: 7px; animation-delay: 0.3s; }
+.music-wave span:nth-child(3) { height: 4px; animation-delay: 0.2s; }
 
-@keyframes wave {
+@keyframes wavePulse {
   0%, 100% { transform: scaleY(0.4); }
-  50% { transform: scaleY(1.2); }
-}
-
-/* Container chính */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px 80px;
-  position: relative;
-  z-index: 2;
+  50% { transform: scaleY(1.3); }
 }
 
 /* ==========================================================================
-   HEADER SECTION
+   6 ẢNH XUNG QUANH MÀN HÌNH (SURROUNDING PHOTO CARDS)
    ========================================================================== */
-.header-section {
-  text-align: center;
-  margin-bottom: 45px;
-  animation: fadeInDown 1.2s ease-out;
-}
-
-.tagline-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 20px;
-  border-radius: 50px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 182, 193, 0.4);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.main-title {
-  font-family: var(--font-title);
-  font-size: clamp(2.4rem, 6vw, 3.8rem);
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 16px;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.highlight-text {
-  background: linear-gradient(135deg, #ff85a2 0%, #ff3366 50%, #fbd561 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  animation: glowPulse 4s infinite ease-in-out;
-}
-
-@keyframes glowPulse {
-  0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.5)); }
-  50% { filter: drop-shadow(0 0 25px rgba(255, 51, 102, 0.9)); }
-}
-
-.subtitle {
-  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
-  color: var(--text-secondary);
-  max-width: 680px;
-  margin: 0 auto;
-  font-style: italic;
-  opacity: 0.95;
-}
-
-/* ==========================================================================
-   CARD & ENVELOPE 3D SECTION
-   ========================================================================== */
-.card-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 60px;
-  perspective: 1200px;
-}
-
-.envelope-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
-  height: 340px;
-  cursor: pointer;
-  margin: 20px auto 10px;
-}
-
-.envelope {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  box-shadow: var(--shadow-soft), var(--shadow-glow);
-  transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Thân phong bì */
-.envelope-back {
+.surrounding-photos-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(145deg, #961842, #680d2d);
-  border-radius: 14px;
-  border: 1px solid rgba(255, 182, 193, 0.3);
-  z-index: 1;
-}
-
-/* Thư bên trong */
-.letter {
-  position: absolute;
-  top: 15px;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  background: #fffdfa;
-  border-radius: 10px;
-  padding: 30px 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  z-index: 2;
-  transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: #3d1b28;
-  border: 2px dashed rgba(214, 28, 78, 0.3);
-  overflow: hidden;
-}
-
-.letter-stamp {
-  position: absolute;
-  top: 15px;
-  right: 18px;
-  background: #ffe3eb;
-  color: #d61c4e;
-  padding: 4px 10px;
-  border-radius: 6px;
-  border: 1px dashed #d61c4e;
-  font-size: 0.8rem;
-  font-weight: 700;
-  transform: rotate(6deg);
-}
-
-.letter-greeting {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  color: #a81c46;
-  margin-bottom: 8px;
-  line-height: 1.2;
-}
-
-.letter-body {
-  font-size: 1.05rem;
-  color: #442230;
-  line-height: 1.6;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-}
-
-.letter-signature {
-  text-align: right;
-  border-top: 1px solid rgba(168, 28, 70, 0.15);
-  padding-top: 10px;
-  display: flex;
-  flex-direction: column;
-  font-size: 0.9rem;
-  color: #7a3a50;
-}
-
-.letter-signature strong {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  color: #d61c4e;
-}
-
-/* Mặt trước phong bì */
-.envelope-front {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 14px;
   pointer-events: none;
-  z-index: 3;
-  clip-path: polygon(0% 0%, 50% 55%, 100% 0%, 100% 100%, 0% 100%);
-  background: linear-gradient(135deg, #ba1e52 0%, #87133a 100%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-/* Nắp phong bì gập */
-.envelope-flap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 55%;
-  background: linear-gradient(180deg, #ca2158 0%, #a81845 100%);
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
-  transform-origin: top;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 4;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Con dấu xi đỏ */
-.wax-seal {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  width: 52px;
-  height: 52px;
-  background: radial-gradient(circle, #e62354 30%, #8f0d30 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.85rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.4);
-  border: 2px solid #ff7597;
-  transition: transform 0.3s ease;
-}
-
-.wax-seal:hover {
-  transform: translate(-50%, 50%) scale(1.1);
-}
-
-/* Trạng thái khi mở phong thư */
-.envelope-wrapper.open .envelope-flap {
-  transform: rotateX(180deg);
-  z-index: 1;
-}
-
-.envelope-wrapper.open .wax-seal {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.envelope-wrapper.open .letter {
-  transform: translateY(-90px);
-  z-index: 5;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-}
-
-.envelope-hint {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0.85;
-  transition: opacity 0.3s ease;
-}
-
-.envelope-hint i {
-  animation: bounceHint 1.5s infinite ease-in-out;
-}
-
-@keyframes bounceHint {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
-}
-
-/* ==========================================================================
-   WISHES SECTION
-   ========================================================================== */
-.wishes-section {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 24px;
-  padding: 36px 30px;
-  margin-bottom: 50px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: var(--shadow-soft);
-  position: relative;
-  overflow: hidden;
-}
-
-.section-title-wrap {
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.sub-heading {
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  color: var(--primary-light);
-  font-weight: 700;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.section-title {
-  font-family: var(--font-title);
-  font-size: clamp(1.6rem, 4vw, 2.2rem);
-  font-weight: 700;
-}
-
-/* Tabs danh mục */
-.wish-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 28px;
-}
-
-.wish-tab {
-  padding: 10px 18px;
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text-secondary);
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.wish-tab:hover {
-  background: rgba(255, 255, 255, 0.18);
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-.wish-tab.active {
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-  border-color: rgba(255, 255, 255, 0.4);
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(255, 51, 102, 0.45);
-}
-
-/* Khung hiển thị lời chúc */
-.wish-display-card {
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px dashed rgba(255, 182, 193, 0.35);
-  border-radius: 18px;
-  padding: 30px;
-  position: relative;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.wish-quote-icon {
-  font-size: 2rem;
-  color: rgba(255, 117, 151, 0.35);
-  margin-bottom: 12px;
-}
-
-.wish-text {
-  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
-  line-height: 1.8;
-  color: #fff;
-  margin-bottom: 24px;
-  min-height: 70px;
-  transition: opacity 0.3s ease;
-}
-
-.wish-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: flex-end;
-}
-
-/* ==========================================================================
-   BUTTONS STYLING
-   ========================================================================== */
-.btn {
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-family: var(--font-body);
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: var(--transition);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: none;
-  outline: none;
-}
-
-.btn:active {
-  transform: scale(0.97);
-}
-
-.btn-primary {
-  background: linear-gradient(135deg, #ff3366, #e6194b);
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(255, 51, 102, 0.4);
-}
-
-.btn-primary:hover {
-  background: linear-gradient(135deg, #ff527b, #ff1a53);
-  box-shadow: 0 6px 20px rgba(255, 51, 102, 0.6);
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-}
-
-.btn-accent {
-  background: linear-gradient(135deg, #f5b041, #eb984e);
-  color: #421805;
-  font-weight: 700;
-  box-shadow: 0 4px 15px rgba(245, 176, 65, 0.35);
-}
-
-.btn-accent:hover {
-  background: linear-gradient(135deg, #f8c471, #f5b041);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(245, 176, 65, 0.5);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--text-secondary);
-  border: 1px solid rgba(255, 182, 193, 0.4);
-}
-
-.btn-outline:hover {
-  background: rgba(255, 182, 193, 0.15);
-  color: #fff;
-  border-color: #fff;
-}
-
-/* ==========================================================================
-   CUSTOMIZE & SHARE SECTION
-   ========================================================================== */
-.customize-section {
-  margin-bottom: 50px;
-}
-
-.customize-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 24px;
-  padding: 35px 30px;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  box-shadow: var(--shadow-soft);
-}
-
-.customize-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
-.customize-header i {
-  font-size: 1.5rem;
-  color: var(--gold-accent);
-}
-
-.customize-header h3 {
-  font-family: var(--font-title);
-  font-size: 1.6rem;
-}
-
-.customize-desc {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin-bottom: 24px;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 24px;
-}
-
-@media (max-width: 650px) {
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-secondary);
-  margin-bottom: 8px;
-}
-
-.input-with-icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.input-with-icon i {
-  position: absolute;
-  left: 16px;
-  color: var(--text-muted);
-  font-size: 1rem;
-}
-
-.input-with-icon input {
-  width: 100%;
-  padding: 12px 16px 12px 44px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  transition: var(--transition);
-}
-
-.input-with-icon input:focus {
-  outline: none;
-  border-color: var(--primary-light);
-  box-shadow: 0 0 12px rgba(255, 51, 102, 0.4);
-  background: rgba(0, 0, 0, 0.45);
-}
-
-.form-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
-/* ==========================================================================
-   BLOOMING FLOWER & VIRTUES SECTION
-   ========================================================================== */
-.bloom-showcase {
-  margin-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flower-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.flower-aura {
-  position: absolute;
-  top: 40px;
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 51, 102, 0.4) 0%, rgba(255, 51, 102, 0) 70%);
-  animation: pulseAura 3s infinite alternate ease-in-out;
-}
-
-@keyframes pulseAura {
-  0% { transform: scale(0.9); opacity: 0.5; }
-  100% { transform: scale(1.3); opacity: 0.9; }
-}
-
-.rose-flower {
-  position: relative;
-  width: 110px;
-  height: 110px;
-  margin-bottom: 14px;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.flower-container:hover .rose-flower {
-  transform: scale(1.15) rotate(5deg);
-}
-
-.petal {
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  background: linear-gradient(135deg, #ff4d79, #c71644);
-  border-radius: 50% 50% 10% 50%;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-  transition: transform 0.5s ease;
-}
-
-.petal-1 { top: 10px; left: 28px; transform: rotate(0deg); }
-.petal-2 { top: 28px; left: 45px; transform: rotate(72deg); }
-.petal-3 { top: 48px; left: 35px; transform: rotate(144deg); }
-.petal-4 { top: 48px; left: 15px; transform: rotate(216deg); }
-.petal-5 { top: 28px; left: 8px; transform: rotate(288deg); }
-
-.rose-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 32px;
-  height: 32px;
-  background: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
-  animation: heartBeat 1.5s infinite;
-}
-
-@keyframes heartBeat {
-  0%, 100% { transform: translate(-50%, -50%) scale(1); }
-  50% { transform: translate(-50%, -50%) scale(1.15); }
-}
-
-.bloom-text {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-/* Grid tôn vinh */
-.virtues-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .virtues-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.virtue-card {
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 18px;
-  padding: 24px;
-  text-align: center;
-  transition: var(--transition);
-  backdrop-filter: blur(10px);
-}
-
-.virtue-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(255, 105, 180, 0.5);
-  box-shadow: 0 10px 25px rgba(255, 51, 102, 0.25);
-}
-
-.virtue-icon {
-  font-size: 2.2rem;
-  margin-bottom: 12px;
-}
-
-.virtue-card h3 {
-  font-family: var(--font-title);
-  font-size: 1.25rem;
-  margin-bottom: 8px;
-  color: #fff;
-}
-
-.virtue-card p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-}
-
-/* ==========================================================================
-   POLAROID PHOTO GALLERY SECTION
-   ========================================================================== */
-.gallery-section {
-  margin-bottom: 60px;
-  text-align: center;
-}
-
-.gallery-desc {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  margin-bottom: 30px;
-}
-
-.polaroid-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-  justify-content: center;
-}
-
-.polaroid-card {
-  background: #ffffff;
-  padding: 14px 14px 20px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-  position: relative;
-  cursor: pointer;
-}
-
-/* Hiệu ứng xoay nhẹ tự nhiên như ảnh chụp */
-.polaroid-card:nth-child(odd) {
-  transform: rotate(-2deg);
-}
-
-.polaroid-card:nth-child(even) {
-  transform: rotate(2deg);
-}
-
-.polaroid-card:hover {
-  transform: translateY(-10px) rotate(0deg) scale(1.05);
-  box-shadow: 0 18px 35px rgba(255, 51, 102, 0.35), 0 0 20px rgba(255, 255, 255, 0.2);
   z-index: 10;
 }
 
-.polaroid-img-wrap {
-  width: 100%;
-  height: 220px;
-  border-radius: 8px;
-  overflow: hidden;
-  background: #f0e6eb;
+.cute-photo-card {
+  position: absolute;
+  pointer-events: auto;
+  background: #ffffff;
+  padding: 8px 8px 12px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-cute);
+  cursor: pointer;
+  transition: var(--transition-bouncy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #fff;
+  user-select: none;
+  max-width: 150px;
 }
 
-.polaroid-img-wrap img {
+/* Băng dính washi đáng yêu ở phía trên ảnh */
+.washi-tape {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 16px;
+  background: rgba(255, 128, 171, 0.75);
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  z-index: 2;
+}
+
+.cute-photo-card:nth-child(even) .washi-tape {
+  background: rgba(255, 209, 102, 0.85);
+}
+
+.photo-img-frame {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffeef4;
+}
+
+.photo-img-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
   display: block;
+  transition: transform 0.4s ease;
 }
 
-.polaroid-card:hover .polaroid-img-wrap img {
-  transform: scale(1.08);
+.photo-tag {
+  margin-top: 6px;
+  text-align: center;
 }
 
-.polaroid-caption {
-  margin-top: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 4px;
-}
-
-.polaroid-caption span {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
+.photo-tag span {
+  font-family: var(--font-cute);
+  font-size: 0.82rem;
   font-weight: 700;
-  color: #4a152d;
-  text-align: left;
+  color: var(--pink-deep);
+  letter-spacing: 0.2px;
 }
 
-.polaroid-caption i {
-  color: #ff3366;
-  font-size: 1.1rem;
-  animation: heartPulse 1.8s infinite ease-in-out;
+/* Định vị 6 bức ảnh xung quanh 4 góc & 2 cạnh */
+.photo-top-left {
+  top: 18px;
+  left: 24px;
+  transform: rotate(-6deg);
+  animation: floatTopLeft 4s infinite alternate ease-in-out;
 }
 
-@keyframes heartPulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.3); }
+.photo-top-right {
+  top: 18px;
+  right: 75px; /* Chừa chỗ cho nút audio */
+  transform: rotate(5deg);
+  animation: floatTopRight 4.5s infinite alternate ease-in-out;
+}
+
+.photo-mid-left {
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%) rotate(4deg);
+  animation: floatMidLeft 5s infinite alternate ease-in-out;
+}
+
+.photo-mid-right {
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%) rotate(-5deg);
+  animation: floatMidRight 4.8s infinite alternate ease-in-out;
+}
+
+.photo-bottom-left {
+  bottom: 18px;
+  left: 24px;
+  transform: rotate(-4deg);
+  animation: floatBotLeft 4.2s infinite alternate ease-in-out;
+}
+
+.photo-bottom-right {
+  bottom: 18px;
+  right: 24px;
+  transform: rotate(6deg);
+  animation: floatBotRight 4.6s infinite alternate ease-in-out;
+}
+
+/* Hover tương tác phóng to & lắc lư ngọt ngào */
+.cute-photo-card:hover {
+  transform: scale(1.2) rotate(0deg) !important;
+  box-shadow: var(--shadow-hover);
+  z-index: 50;
+}
+
+.cute-photo-card:hover .photo-img-frame img {
+  transform: scale(1.1);
+}
+
+/* Keyframes chuyển động bồng bềnh tự nhiên */
+@keyframes floatTopLeft {
+  0% { transform: translateY(0px) rotate(-6deg); }
+  100% { transform: translateY(8px) rotate(-4deg); }
+}
+
+@keyframes floatTopRight {
+  0% { transform: translateY(0px) rotate(5deg); }
+  100% { transform: translateY(7px) rotate(7deg); }
+}
+
+@keyframes floatMidLeft {
+  0% { transform: translateY(-50%) rotate(4deg); }
+  100% { transform: translateY(calc(-50% - 8px)) rotate(2deg); }
+}
+
+@keyframes floatMidRight {
+  0% { transform: translateY(-50%) rotate(-5deg); }
+  100% { transform: translateY(calc(-50% + 8px)) rotate(-3deg); }
+}
+
+@keyframes floatBotLeft {
+  0% { transform: translateY(0px) rotate(-4deg); }
+  100% { transform: translateY(-7px) rotate(-2deg); }
+}
+
+@keyframes floatBotRight {
+  0% { transform: translateY(0px) rotate(6deg); }
+  100% { transform: translateY(-8px) rotate(4deg); }
 }
 
 /* ==========================================================================
-   FOOTER
+   KHU VỰC TRUNG TÂM (CENTER STAGE - GÓI GỌN TRÊN 1 MÀN HÌNH)
    ========================================================================== */
-.footer {
+.center-stage {
+  position: relative;
+  z-index: 20;
+  width: 90%;
+  max-width: 620px;
+  max-height: 96vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
   text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.footer-hearts {
-  font-size: 1.4rem;
+/* Header */
+.stage-header {
   margin-bottom: 12px;
-  letter-spacing: 6px;
 }
 
-.footer-quote {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  color: var(--text-secondary);
-  margin-bottom: 8px;
+.badge-2010 {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 16px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--pink-deep);
+  font-family: var(--font-cute);
+  font-size: 0.82rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(255, 64, 129, 0.18);
+  margin-bottom: 6px;
+  border: 1px solid rgba(255, 128, 171, 0.4);
 }
 
-.footer-copy {
-  font-size: 0.85rem;
+.stage-title {
+  font-family: var(--font-cute);
+  font-size: clamp(1.6rem, 3.8vw, 2.3rem);
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.sparkle-pink {
+  background: linear-gradient(135deg, #ff1493, #ff4081, #ff70a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-shadow: 0 2px 10px rgba(255, 64, 129, 0.3);
+}
+
+.stage-sub {
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
   color: var(--text-muted);
+  font-weight: 600;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   THẺ THIỆP PHÉP MÀU (MAGIC CARD CONTAINER)
+   ========================================================================== */
+.magic-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 12px 35px rgba(255, 64, 129, 0.22), var(--shadow-inset);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Tabs chọn chủ đề */
+.category-pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill-btn {
+  padding: 6px 14px;
+  border-radius: 30px;
+  border: 1.5px solid rgba(255, 128, 171, 0.35);
+  background: #fff;
+  color: var(--text-muted);
+  font-family: var(--font-cute);
+  font-weight: 700;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: var(--transition-bouncy);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(255, 64, 129, 0.08);
+}
+
+.pill-btn:hover {
+  transform: translateY(-2px);
+  border-color: var(--pink-primary);
+  color: var(--pink-deep);
+}
+
+.pill-btn.active {
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-deep));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.35);
+}
+
+/* Khung thư (Letter Box) */
+.letter-box {
+  background: linear-gradient(145deg, #ffffff 0%, #fff6f9 100%);
+  border: 2px dashed #ffb6c1;
+  border-radius: 18px;
+  padding: 16px 20px;
+  position: relative;
+  box-shadow: inset 0 2px 6px rgba(255, 182, 193, 0.2);
+  min-height: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter-decor-heart {
+  position: absolute;
+  top: -12px;
+  right: 18px;
+  font-size: 1.4rem;
+  animation: heartWiggle 2s infinite ease-in-out;
+}
+
+@keyframes heartWiggle {
+  0%, 100% { transform: rotate(-5deg) scale(1); }
+  50% { transform: rotate(10deg) scale(1.15); }
+}
+
+.letter-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.letter-to {
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  color: var(--pink-deep);
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.letter-to strong {
+  font-weight: 700;
+  color: var(--pink-primary);
+}
+
+.letter-text {
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  line-height: 1.6;
+  color: #4a152d;
+  font-weight: 600;
+  text-align: center;
+  margin: 6px 0;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s ease;
+}
+
+.letter-from {
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  color: var(--pink-deep);
+  text-align: right;
+  margin-top: 4px;
+}
+
+.letter-from strong {
+  font-weight: 700;
+}
+
+/* Tùy chỉnh người nhận & người gửi siêu nhanh */
+.quick-customize {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.input-cute-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-cute-wrap i {
+  position: absolute;
+  left: 12px;
+  color: var(--pink-soft);
+  font-size: 0.9rem;
+}
+
+.input-cute-wrap input {
+  width: 100%;
+  padding: 8px 12px 8px 32px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(255, 128, 171, 0.4);
+  background: #fff;
+  color: var(--text-main);
+  font-family: var(--font-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.input-cute-wrap input:focus {
+  border-color: var(--pink-primary);
+  box-shadow: 0 0 10px rgba(255, 64, 129, 0.25);
+}
+
+/* Thanh nút thao tác */
+.card-action-bar {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-family: var(--font-cute);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: var(--transition-bouncy);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.action-btn:active {
+  transform: scale(0.95);
+}
+
+.btn-cute-pink {
+  background: linear-gradient(135deg, var(--pink-primary), var(--pink-deep));
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.35);
+}
+
+.btn-cute-pink:hover {
+  background: linear-gradient(135deg, #ff5792, #e0115f);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(233, 30, 99, 0.5);
+}
+
+.btn-cute-gold {
+  background: linear-gradient(135deg, #ffd166, #ffb703);
+  color: #5c3b00;
+  box-shadow: 0 4px 12px rgba(255, 183, 3, 0.3);
+}
+
+.btn-cute-gold:hover {
+  background: linear-gradient(135deg, #ffe082, #ffa000);
+  transform: translateY(-2px);
+}
+
+.btn-cute-outline {
+  background: #fff;
+  color: var(--pink-deep);
+  border: 1.5px solid rgba(255, 128, 171, 0.4);
+}
+
+.btn-cute-outline:hover {
+  background: #fff0f5;
+  border-color: var(--pink-primary);
+  transform: translateY(-2px);
+}
+
+/* Footer nhỏ */
+.stage-footer {
+  margin-top: 10px;
+  font-family: var(--font-hand);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--pink-deep);
+}
+
+/* ==========================================================================
+   MODAL PHÓNG TO ẢNH
+   ========================================================================== */
+.photo-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.photo-modal.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(45, 12, 28, 0.65);
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  padding: 16px 16px 22px;
+  border-radius: 20px;
+  max-width: 90vw;
+  max-height: 85vh;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.85);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.photo-modal.show .modal-content {
+  transform: scale(1);
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: 14px;
+  object-fit: contain;
+}
+
+.modal-caption {
+  margin-top: 12px;
+  font-family: var(--font-cute);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--pink-deep);
+}
+
+.modal-close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--pink-deep);
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.modal-close:hover {
+  transform: scale(1.15);
 }
 
 /* ==========================================================================
    TOAST NOTIFICATION
    ========================================================================== */
-.toast {
+.cute-toast {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: rgba(30, 10, 25, 0.95);
-  border: 1px solid #ff7597;
-  color: #fff;
-  padding: 12px 22px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--pink-primary);
+  color: var(--pink-deep);
+  padding: 10px 22px;
   border-radius: 50px;
+  font-family: var(--font-cute);
+  font-size: 0.9rem;
+  font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 51, 102, 0.4);
-  transform: translateY(120px);
+  gap: 8px;
+  box-shadow: 0 8px 25px rgba(255, 64, 129, 0.35);
   opacity: 0;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: var(--transition-bouncy);
   z-index: 9999;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 }
 
-.toast i {
-  color: #2ecc71;
-  font-size: 1.2rem;
+.cute-toast i {
+  color: var(--pink-primary);
+  font-size: 1.1rem;
 }
 
-.toast.show {
-  transform: translateY(0);
+.cute-toast.show {
+  transform: translateX(-50%) translateY(0);
   opacity: 1;
 }
 
 /* ==========================================================================
-   RESPONSIVE ADJUSTMENTS
+   RESPONSIVE DESIGN (GIỮ VỮNG 1 MÀN HÌNH KHÔNG SCROLL TRÊN MỌI THIẾT BỊ)
    ========================================================================== */
-@media (max-width: 600px) {
-  .container {
-    padding: 25px 15px 60px;
+@media (max-width: 1024px) {
+  .cute-photo-card {
+    max-width: 120px;
+    padding: 6px 6px 10px;
   }
-
-  .envelope-wrapper {
-    height: 300px;
+  .photo-img-frame {
+    width: 95px;
+    height: 95px;
   }
-
-  .envelope-wrapper.open .letter {
-    transform: translateY(-70px);
-    padding: 20px 16px;
+  .photo-tag span {
+    font-size: 0.75rem;
   }
-
-  .letter-greeting {
-    font-size: 1.4rem;
+  .center-stage {
+    max-width: 540px;
   }
+}
 
-  .letter-body {
-    font-size: 0.92rem;
+@media (max-width: 768px) {
+  /* Trên màn hình di động: Tinh gọn 6 ảnh nhỏ gọn vào các góc */
+  .cute-photo-card {
+    max-width: 85px;
+    padding: 4px 4px 6px;
+    border-radius: 10px;
   }
-
-  .wishes-section,
-  .customize-card {
-    padding: 24px 18px;
+  .photo-img-frame {
+    width: 72px;
+    height: 72px;
+    border-radius: 8px;
   }
-
-  .wish-actions,
-  .form-actions {
-    flex-direction: column;
-    width: 100%;
+  .washi-tape {
+    width: 32px;
+    height: 10px;
+    top: -5px;
   }
+  .photo-tag span {
+    font-size: 0.65rem;
+  }
+  
+  .photo-top-left { top: 10px; left: 10px; }
+  .photo-top-right { top: 10px; right: 55px; }
+  .photo-mid-left { display: none; } /* Ẩn 2 ảnh giữa để nhường không gian cho điện thoại */
+  .photo-mid-right { display: none; }
+  .photo-bottom-left { bottom: 10px; left: 10px; }
+  .photo-bottom-right { bottom: 10px; right: 10px; }
 
-  .btn {
-    width: 100%;
-    justify-content: center;
+  .center-stage {
+    width: 95%;
+    padding: 5px;
+  }
+  .magic-card {
+    padding: 12px 14px;
+    border-radius: 18px;
+    gap: 8px;
+  }
+  .quick-customize {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .letter-box {
+    padding: 10px 14px;
+    min-height: 110px;
+  }
+  .stage-footer {
+    display: none; /* Tiết kiệm chiều cao màn hình mobile */
   }
 }
